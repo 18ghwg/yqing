@@ -1,0 +1,252 @@
+2022-12-06 16:32:00,026 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:12
+2022-12-06 16:32:00,037 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:32:00,070 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:32:00,077 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:12
+2022-12-06 16:32:00,117 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:12的未打卡用户
+2022-12-06 16:32:00,149 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:32:00
+2022-12-06 16:32:00,191 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:32:00
+2022-12-06 16:32:00,194 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:32:00没有用户需要打卡！
+2022-12-06 16:32:00,594 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:32:00,596 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:12的未打卡用户
+2022-12-06 16:32:00,623 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:32:00,633 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:32:00没有用户需要打卡！
+2022-12-06 16:33:00,023 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:13
+2022-12-06 16:33:00,039 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:33:00,041 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:13
+2022-12-06 16:33:00,042 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:13的未打卡用户
+2022-12-06 16:33:00,052 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:33:00,056 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:33:00
+2022-12-06 16:33:00,062 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:13的未打卡用户
+2022-12-06 16:33:00,069 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:33:00,071 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:33:00
+2022-12-06 16:33:00,078 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:33:00,101 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:33:00没有用户需要打卡！
+2022-12-06 16:33:00,165 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:33:00没有用户需要打卡！
+2022-12-06 16:34:00,013 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:14
+2022-12-06 16:34:00,028 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:34:00
+2022-12-06 16:34:00,047 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:14
+2022-12-06 16:34:00,061 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:34:00
+2022-12-06 16:34:00,091 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:34:00,097 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:14的未打卡用户
+2022-12-06 16:34:00,116 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:34:00,128 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:34:00没有用户需要打卡！
+2022-12-06 16:34:00,314 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:34:00,322 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:14的未打卡用户
+2022-12-06 16:34:00,347 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:34:00,351 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:34:00没有用户需要打卡！
+2022-12-06 16:35:00,043 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:15
+2022-12-06 16:35:00,047 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:15
+2022-12-06 16:35:00,057 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:35:00,060 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:35:00,064 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:15的未打卡用户
+2022-12-06 16:35:00,065 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:15的未打卡用户
+2022-12-06 16:35:00,088 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:35:00,090 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:35:00,095 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:35:00
+2022-12-06 16:35:00,117 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:35:00
+2022-12-06 16:35:00,155 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:35:00没有用户需要打卡！
+2022-12-06 16:35:00,182 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:35:00没有用户需要打卡！
+2022-12-06 16:36:00,035 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:16
+2022-12-06 16:36:00,041 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:16
+2022-12-06 16:36:00,054 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:36:00,063 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:16的未打卡用户
+2022-12-06 16:36:00,065 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:36:00,067 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:16的未打卡用户
+2022-12-06 16:36:00,089 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:36:00,103 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:36:00,114 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:36:00
+2022-12-06 16:36:00,124 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:36:00
+2022-12-06 16:36:00,172 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:36:00没有用户需要打卡！
+2022-12-06 16:36:00,191 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:36:00没有用户需要打卡！
+2022-12-06 16:37:00,020 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:17
+2022-12-06 16:37:00,020 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:17
+2022-12-06 16:37:00,101 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:37:00
+2022-12-06 16:37:00,104 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:37:00
+2022-12-06 16:37:00,116 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:37:00,116 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:37:00,120 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:17的未打卡用户
+2022-12-06 16:37:00,121 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:17的未打卡用户
+2022-12-06 16:37:00,145 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:37:00,149 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:37:00,157 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:37:00没有用户需要打卡！
+2022-12-06 16:37:00,158 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:37:00没有用户需要打卡！
+2022-12-06 16:38:00,024 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:18
+2022-12-06 16:38:00,025 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:18
+2022-12-06 16:38:00,040 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:38:00,042 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:18的未打卡用户
+2022-12-06 16:38:00,043 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:38:00,048 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:18的未打卡用户
+2022-12-06 16:38:00,051 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:38:00
+2022-12-06 16:38:00,052 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:38:00
+2022-12-06 16:38:00,076 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:38:00,119 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:38:00没有用户需要打卡！
+2022-12-06 16:38:00,119 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:38:00没有用户需要打卡！
+2022-12-06 16:38:00,302 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:39:00,020 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:19
+2022-12-06 16:39:00,020 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:19
+2022-12-06 16:39:00,032 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:39:00,033 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:39:00
+2022-12-06 16:39:00,036 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:39:00
+2022-12-06 16:39:00,036 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:39:00,037 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:19的未打卡用户
+2022-12-06 16:39:00,038 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:19的未打卡用户
+2022-12-06 16:39:00,045 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:19
+2022-12-06 16:39:00,052 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:19
+2022-12-06 16:39:00,054 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:39:00
+2022-12-06 16:39:00,058 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:39:00,063 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:39:00
+2022-12-06 16:39:00,064 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:39:00,070 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:39:00没有用户需要打卡！
+2022-12-06 16:39:00,074 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:39:00没有用户需要打卡！
+2022-12-06 16:39:00,313 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:39:00,319 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:19的未打卡用户
+2022-12-06 16:39:00,324 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:19的未打卡用户
+2022-12-06 16:39:00,328 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:39:00,336 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:39:00没有用户需要打卡！
+2022-12-06 16:39:00,344 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:39:00,355 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:39:00没有用户需要打卡！
+2022-12-06 16:39:00,360 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:40:00,018 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:20
+2022-12-06 16:40:00,031 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:40:00
+2022-12-06 16:40:00,046 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:20
+2022-12-06 16:40:00,055 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:40:00
+2022-12-06 16:40:00,093 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:40:00,111 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:20的未打卡用户
+2022-12-06 16:40:00,118 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:40:00,137 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:40:00没有用户需要打卡！
+2022-12-06 16:40:00,301 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:20的未打卡用户
+2022-12-06 16:40:00,302 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:40:00,329 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:40:00,331 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:40:00没有用户需要打卡！
+2022-12-06 16:41:00,017 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:21
+2022-12-06 16:41:00,020 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:21
+2022-12-06 16:41:00,031 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:41:00,032 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:41:00,034 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:21的未打卡用户
+2022-12-06 16:41:00,037 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:41:00
+2022-12-06 16:41:00,040 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:41:00
+2022-12-06 16:41:00,041 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:21的未打卡用户
+2022-12-06 16:41:00,058 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:41:00,064 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:41:00,082 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:41:00没有用户需要打卡！
+2022-12-06 16:41:00,150 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:41:00没有用户需要打卡！
+2022-12-06 16:42:00,013 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:22
+2022-12-06 16:42:00,024 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:42:00
+2022-12-06 16:42:00,026 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:42:00,051 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:22
+2022-12-06 16:42:00,053 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:42:00,062 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:42:00
+2022-12-06 16:42:00,095 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:22的未打卡用户
+2022-12-06 16:42:00,152 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:42:00没有用户需要打卡！
+2022-12-06 16:42:00,304 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:22的未打卡用户
+2022-12-06 16:42:00,305 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:42:00,333 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:42:00没有用户需要打卡！
+2022-12-06 16:42:00,334 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:43:00,026 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:23
+2022-12-06 16:43:00,034 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:23
+2022-12-06 16:43:00,038 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:43:00,049 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:43:00
+2022-12-06 16:43:00,067 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:43:00,094 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:43:00
+2022-12-06 16:43:00,118 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:23的未打卡用户
+2022-12-06 16:43:00,177 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:43:00没有用户需要打卡！
+2022-12-06 16:43:00,339 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:23的未打卡用户
+2022-12-06 16:43:00,340 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:43:00,360 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:43:00没有用户需要打卡！
+2022-12-06 16:43:00,374 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:44:00,022 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:24
+2022-12-06 16:44:00,032 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:44:00,035 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:44:00
+2022-12-06 16:44:00,053 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:18] - INFO: 
+--------
+【检测未打卡】开始执行未打卡用户检测!
+【检测未打卡】当前检测的打卡时间：16:24
+2022-12-06 16:44:00,061 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束
+2022-12-06 16:44:00,069 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:358] - INFO: 【疫情打卡】当前打卡时间：16:44:00
+2022-12-06 16:44:00,108 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:24的未打卡用户
+2022-12-06 16:44:00,134 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:44:00没有用户需要打卡！
+2022-12-06 16:44:00,317 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:18] - INFO: 【检测用户打卡时间】开始
+2022-12-06 16:44:00,319 - C:\Users\观后无感\Desktop\yqing\tasks\CheckNDKUser\checkndkuser.py[line:43] - INFO: 【检测未打卡】未搜到当前时间16:24的未打卡用户
+2022-12-06 16:44:00,339 - C:\Users\观后无感\Desktop\yqing\tasks\YQDK\daka.py[line:416] - INFO: 【疫情打卡】这个时间：16:44:00没有用户需要打卡！
+2022-12-06 16:44:00,346 - C:\Users\观后无感\Desktop\yqing\tasks\CheckUserDkTime\CheckUserDkTime.py[line:28] - INFO: 【检测用户打卡时间】结束

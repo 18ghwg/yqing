@@ -1,0 +1,74 @@
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1670313297315)
++++ b/.idea/vcs.xml	(date 1670313297315)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/inspectionProfiles/Project_Default.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml
+new file mode 100644
+--- /dev/null	(date 1670313297297)
++++ b/.idea/inspectionProfiles/Project_Default.xml	(date 1670313297297)
+@@ -0,0 +1,46 @@
++<component name="InspectionProjectProfileManager">
++  <profile version="1.0">
++    <option name="myName" value="Project Default" />
++    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
++    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
++      <option name="ignoredPackages">
++        <value>
++          <list size="10">
++            <item index="0" class="java.lang.String" itemvalue="django-ranged-response" />
++            <item index="1" class="java.lang.String" itemvalue="six" />
++            <item index="2" class="java.lang.String" itemvalue="Django" />
++            <item index="3" class="java.lang.String" itemvalue="django-simple-captcha" />
++            <item index="4" class="java.lang.String" itemvalue="pytz" />
++            <item index="5" class="java.lang.String" itemvalue="Pillow" />
++            <item index="6" class="java.lang.String" itemvalue="requests" />
++            <item index="7" class="java.lang.String" itemvalue="nonebot" />
++            <item index="8" class="java.lang.String" itemvalue="sqLalchemy" />
++            <item index="9" class="java.lang.String" itemvalue="flask" />
++          </list>
++        </value>
++      </option>
++    </inspection_tool>
++    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
++      <option name="ignoredErrors">
++        <list>
++          <option value="N806" />
++          <option value="N803" />
++        </list>
++      </option>
++    </inspection_tool>
++    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
++      <option name="ignoredIdentifiers">
++        <list>
++          <option value="str.*" />
++          <option value="dict.*" />
++          <option value="web.json.*" />
++        </list>
++      </option>
++    </inspection_tool>
++    <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
++      <option name="processCode" value="true" />
++      <option name="processLiterals" value="true" />
++      <option name="processComments" value="true" />
++    </inspection_tool>
++  </profile>
++</component>
+\ No newline at end of file
