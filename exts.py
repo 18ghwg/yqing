@@ -13,6 +13,6 @@ def limit_key_func():
 limiter = Limiter(
     app, key_func=limit_key_func,
     default_limits=["20 per minute"],
-    storage_uri="redis://default:sun0218..@127.0.0.1:6379",
+    # storage_uri="redis://default:redis密码@127.0.0.1:6379",  # 这里可以填写redis的配置
 )
 db = SQLAlchemy(session_options={"expire_on_commit": False})
