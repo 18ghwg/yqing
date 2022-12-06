@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{% endblock %}</title>
+  <meta name="Description" content="{{ WebName }}" />
+  <meta name="Keywords" content="南科疫情自动打卡,web在线提交,一键上车,观后无感" />
+  <link href="{{ url_for('static', filename='css/authchoice.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/site.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/cuosmo.css')}}" rel="stylesheet">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  <script src="https://lib.baomitu.com/layer/3.1.1/layer.js"></script>
+  <link rel="shortcut icon" href="{{url_for('static', filename='img/favicon.ico')}}">
+  <style>.mfooter {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    bottom: 0;
+    max-width: 640px;
+    min-width: 320px;
+    z-index: 99999;
+    /* background: url(/images/f_dh.jpg) repeat-x; */
+    background-color: #5694df;
+    border-top: 1px solid #0f6bd3;
+  }
+  .mfooter ul{
+    padding:0;
+  }
+  .mfooter ul li em {
+    width: 2.25rem;
+    display: block;
+    margin: 0 auto 0.3rem;
+    line-height: 0;
+  }
+  .mfooter ul li {
+    width: 33%;
+    text-align: center;
+    float: left;
+    /*height: 4.26rem;*/
+    list-style-type:none;
+    padding: 11px 0;
+    position: relative;
+  }
+
+  .mfooter em i{
+    color:#FFF;
+    font-size: 25px;
+  }
+  .mfooter a:link {text-decoration:none;color:#FFF;}
+  .mfooter a:visited  {text-decoration:none;color:#FFF;}
+  .mfooter a:hover {text-decoration:none;color:#FFF;}
+  .mfooter a:active {text-decoration:none;color:#FFF;}
+  </style>
+
+</head>
+<body style='background-image:url("{{ url_for('static', filename='img/background.png') }}");'>
+
+<div class="wrap">
+  <nav id="w1" class="navbar navbar-default">
+    <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp;&nbsp;
+      <span>{{ WebName }}</span><br><text style="color: rgb(255,255,255);"><b><span id="span1">0</span>人在使用</b></text></a>
+    <div class="container" style="margin-right: 1%">
+      <div class="navbar-header" >
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="w1-collapse" class="collapse navbar-collapse"><ul id="w2" class="navbar-nav navbar-right nav">
+        <li><a href="http://srun.blog18.cn" target="_blank"><span class="glyphicon glyphicon-link"></span> 科技阳光跑</a></li>
+        <li><a href="https://www.blog18.cn/archives/1835/"><span class="glyphicon glyphicon-paperclip"></span> 作者博客</a></li>
+        {% if xuehao %}
+        <li class="active"><a href="{{ url_for('user.user_info') }}"><span class="glyphicon glyphicon-user"></span> {{ xuehao }}:主页 </a></li>
+        {% else %}
+        <li class="active"><a href="{{ url_for('user.user_login') }}"><span class="glyphicon glyphicon-log-in"></span> 后台登录</a></li>
+        {% endif %}
+      </ul></div>
+    </div>
+  </nav>
+  {% block body %}{% endblock %}
+</div>
+
+
+<script src="{{ url_for('static', filename='js/jquery.js')}}"></script>
+<script src="{{ url_for('static', filename='js/yii.js')}}"></script>
+<script src="{{ url_for('static', filename='js/yii.validation.js')}}"></script>
+<script src="{{ url_for('static', filename='js/authchoice.js')}}"></script>
+<script src="{{ url_for('static', filename='js/yii.activeForm.js')}}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.js')}}"></script>
+
+<!-- 国旗插件开始 -->
+<img src="https://home.blog18.cn/img/China.svg" style="width:60px;right:0px;position:fixed;bottom:0px;">
+<!-- 国旗插件结束 -->
+
+<script>jQuery(function ($) {
+  jQuery('#w0').authchoice();
+  jQuery('#adduser-form').yiiActiveForm([{"id":"addxuehao","name":"addxuehao","container":".field-frontloginform-addxuehao","input":"#addxuehao","error":".help-block.help-block-error","validateOnChange":false,"validateOnBlur":false,"validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"账号不能为空。"});}},{"id":"addmima","name":"addmima","container":".field-frontloginform-addmima","input":"#addmima","error":".help-block.help-block-error","validateOnChange":false,"validateOnBlur":false,"validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"密码不能为空。"});}},{"id":"addemail","name":"addemail","container":".field-frontloginform-addemail","input":"#addemail","error":".help-block.help-block-error","validateOnChange":false,"validateOnBlur":false,"validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"邮箱不能为空。"});}},{"id":"dk_time","name":"beizhu","container":".field-frontloginform-dk_time","input":"#dk_time","error":".help-block.help-block-error","validateOnChange":false,"validateOnBlur":false,"validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"打卡时间不能为空！"});}}], []);
+});</script>
+<script>jQuery(function ($) {
+  jQuery('#w3').authchoice();
+  jQuery('#deluser-form').yiiActiveForm([{"id":"delxuehao","name":"delxuehao","container":".field-frontloginform-delxuehao","input":"#delxuehao","error":".help-block.help-block-error","validateOnChange":false,"validateOnBlur":false,"validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"账号不能为空。"});}},{"id":"delmima","name":"delmima","container":".field-frontloginform-delmima","input":"#delmima","error":".help-block.help-block-error","validateOnChange":false,"validateOnBlur":false,"validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"密码不能为空。"});}},{"id":"delbeizhu","name":"delbeizhu","container":".field-frontloginform-delbeizhu","input":"#delbeizhu","error":".help-block.help-block-error","validateOnChange":false,"validateOnBlur":false,"validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"原因不能为空。"});}}], []);
+});</script>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <p class="pull-left">
+        ©版权信息：观后无感
+      </p>
+    </div>
+  </div>
+</footer>
+<!--人数统计特效-->
+<script>NumDynamic("span1",1,{{ num }});function NumDynamic(ID,speed,value){var span1 = document.getElementById(ID);if(value>0){var num = 0;var t = setInterval(function(){num++;span1.innerText = num;if(num==value){clearInterval(t);}},speed);}else{span1.innerText = value;}}</script>
+</body>
+
+</html>
+
+<script type="text/javascript">
+    console.log(' %c 观后无感 %c https://www.blog18.cn/ ', 'color: #fff; background: #2dce89; padding:5px;', 'background: #1c2b36; padding:5px;');
+</script>

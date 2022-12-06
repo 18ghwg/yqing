@@ -1,0 +1,128 @@
+{% extends "admin/header.html" %}
+{% block title %}自动打卡管理后台{% endblock %}
+{% block body %}
+    <!--内容区域-->
+    <div class="bsa-main-wrapper">
+        <div class="bsa-main-content">
+            <!-- 内容都应该被包裹在此-->
+            <div class="container-fluid">
+                <div class="row g-3">
+                    <!-- 四个卡片 -->
+                    <div class="col-xxl-3 col-xl-6">
+                        <div class="card border-0 shadow-sm text-white bsa-bg-color4 bsa-radius-15">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="me-1">
+                                        <h6 class="mb-2 bsa-ellipsis">今日新增</h6>
+                                        <h4 class="mb-1 bsa-ellipsis" id="user_today">{{ user.user_today }}</h4>
+                                    </div>
+                                    <i class="bi bi-people fs-1"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-6">
+                        <div class="card border-0 shadow-sm text-white bsa-bg-color3 bsa-radius-15">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="me-1">
+                                        <h6 class="mb-2 bsa-ellipsis">用户总数</h6>
+                                        <h4 class="mb-1 bsa-ellipsis" id="user_num">{{ user.user_num }}</h4>
+                                    </div>
+                                    <i class="bi bi-people fs-1"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 四个图表 -->
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-header bg-white">
+                                近七天账号新增
+                            </div>
+                            <div class="card-body">
+                                <canvas id="user-week"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='admin/lib/chart.js/dist/chart.min.js') }}"></script>
+    <script>
+        new Chart(document.getElementById('user-week').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: [{% for week in user.user_week_list %}'{{ week }}',{% endfor %}],
+                datasets: [{
+                    label: '新增账号数',
+                    data: {{ user.user_week_num }},
+                    backgroundColor: [
+                        'rgba(224,65,159,0.2)',
+                        'rgba(139,74,15,0.2)',
+                        'rgba(39,219,69,0.2)',
+                        'rgba(67,111,208,0.2)',
+                        'rgba(140,51,196,0.2)',
+                        'rgba(62,179,40,0.2)',
+                        'rgba(52,204,250,0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(224,65,159,0.2)',
+                        'rgba(139,74,15,0.2)',
+                        'rgba(39,219,69,0.2)',
+                        'rgba(67,111,208,0.2)',
+                        'rgba(140,51,196,0.2)',
+                        'rgba(62,179,40,0.2)',
+                        'rgba(52,204,250,0.2)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+
+    </script>
+
+    <script type="text/javascript">
+        var isLoaded = false;
+        function reqs() {
+            $.ajax({
+                type: 'post',
+                url: '{{ url_for("admin_index.admin_ajax_api") }}',
+                dataType: 'json',
+                beforeSend: function() {
+                    isLoaded = false;
+                },
+                success: function(res) {
+                    {#console.log(res);#}
+                    // 处理信息
+                    document.getElementById("user_today").innerHTML = res.user.user_today;
+                    document.getElementById("user_num").innerHTML = res.user.user_num;
+                },
+                complete: function() {
+                    isLoaded = true;
+                },
+                error: function() {
+                    console.log('请求失败~');
+                }
+            });
+        }
+        reqs();
+        setInterval(function() {
+            isLoaded && reqs();
+        }, 5000);
+
+    </script>
+
+{% endblock %}
+

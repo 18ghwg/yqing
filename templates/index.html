@@ -1,0 +1,160 @@
+{% extends "header.html" %}
+{% block title %}{{ WebName }}{% endblock %}
+{% block body %}
+
+    <script src="{{ url_for('static', filename='js/clock/bootstrap-clockpicker.js')}}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/clock/bootstrap-clockpicker.css')}}">
+
+    <div class="container" style="padding: 10px 15px 20px;">
+
+        <div class="row">
+
+            <div class="col-md-5 col-sm-push-8 sty5">
+                <div class="site-login" style="width: 100%;">
+                    <div class="panel panel-default" style="box-shadow:0 40px 80px 0 rgba(0,0,0,0.3)">
+                        <h1 style="text-align: center; color: #121212;"> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><span style="text-shadow: 0px 0px 4px grey;">&nbsp;&nbsp;疫情打卡</span></h1>
+                        <div class="panel-body">
+                            <div class=" xcol-lg-offset-3 xcol-lg-5" style=".middle { float: none;   display: inline-block;   vertical-align: middle;}">
+
+                                <div>
+                                    <div>
+
+                                        <!-- Nav tabs -->
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li role="presentation" class="active"><a href="#userauth" aria-controls="userauth" role="tab" data-toggle="tab">账号添加</a></li>
+                                            <li role="presentation"><a href="#revise" aria-controls="revise" role="tab" data-toggle="tab">地址修改</a></li>
+                                            <li role="presentation"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">用户后台</a></li>
+                                        </ul>
+
+                                        <!-- Tab panes -->
+                                        <div class="tab-content">
+                                            <!-- 账号登录Start -->
+                                            <div role="tabpanel" class="tab-pane active" id="userauth">
+                                                <div class="row"><p></p><p></p><p></p></div><form id="adduser-form" class="form-horizontal" action="/user/add" method="post">
+                                                <!--                                                账号添加-->
+                                                <div class="row" style="margin-right: 15px;margin-left: 15px;text-align:center;">
+                                                    <div class="form-group field-frontloginform-addxuehao required">
+                                                        <div class="col-xs-12 col-sm-12  input-group"><span class="input-group-addon" id="basic-addon1">学号:</span><input type="text" id="addxuehao" class="form-control" name="addxuehao" onkeyup="value=value.replace(/\s+/g, '')" autofocus="" placeholder="打卡学号" style="text-align:center;background-color:#f3f3f3;" aria-required="true"></div><div class="col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0"><p class="help-block help-block-error"></p></div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row" style="margin-right: 15px;margin-left: 15px;text-align:center;">
+                                                    <div class="form-group field-frontloginform-addmima required">
+                                                        <div class="col-xs-12 col-sm-12  input-group"><span class="input-group-addon" id="basic-addon2">密码:</span><input type="password" id="addmima" class="form-control" name="addmima" onkeyup="value=value.replace(/\s+/g, '')" autofocus="" placeholder="打卡密码" style="text-align:center;background-color:#f3f3f3;" aria-required="true"></div><div class="col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0"><p class="help-block help-block-error"></p></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row" style="margin-right: 15px;margin-left: 15px;text-align:center;">
+                                                    <div class="form-group field-frontloginform-addemail required">
+                                                        <div class="col-xs-12 col-sm-12  input-group"><span class="input-group-addon" id="basic-addon3">邮箱:</span><input type="email" id="addemail" class="form-control" name="addemail" onkeyup="value=value.replace(/\s+/g, '')" autofocus="" placeholder="QQ邮箱" style="text-align:center;background-color:#f3f3f3;" aria-required="true"></div><div class="col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0"><p class="help-block help-block-error"></p></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row" style="margin-right: 15px;margin-left: 15px;text-align:center;">
+                                                    <div class="form-group field-frontloginform-dk_time required">
+                                                        <div class="col-xs-12 col-sm-12  input-group">
+                                                            <span class="input-group-addon" id="basic-addon4">打卡时间:</span>
+                                                            <div class="input-group clockpicker" data-autoclose="true">
+                                                                <input type="text" maxlength="0" id="dk_time" class="form-control" name="dk_time" onkeyup="value=value.replace(/\s+/g, '')" autofocus="" placeholder="--请选择--" style="text-align:center;background-color:#f3f3f3;">
+                                                                <span class="input-group-addon">
+                                                                <span class="glyphicon glyphicon-time"></span>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row" style="margin-right: 0px;margin-left: 0px;margin-bottom: -10px;"><p class="help-block help-block-error">
+
+                                                </p>
+                                                </div>
+                                                <p style="color: #dc4253">提交后需要进行邮件验证哦！！</p>
+                                                <div class="row" style="margin-right: 0px;margin-left: 0px;">
+                                                    <div class="form-group text-center">
+                                                        <div id="w0">
+                                                        </div><div class="col-xs-12 col-sm-12"><button id="add_button" name="add_button" type="submit" class="btn  btn-primary btn-lg btn-block " >提交</button></div>
+                                                    </div>
+                                                </div>
+
+                                            </form></div>
+                                            <!--                                            地址修改-->
+                                            <div role="tabpanel" class="tab-pane" id="revise">
+                                                <div class="row"><p></p><p></p><p></p></div>
+                                                <p>
+                                                <div style="text-align: center;">
+                                                    <a href="https://www.blog18.cn/archives/1852/"><text style="color:#7f0e32;"><b>>>手动修改打卡地点<<</b></text></a><br>
+                                                    <a href="https://www.blog18.cn/archives/1852/"><text style="color:#7f0e32;"><b>>>手动修改打卡地点<<</b></text></a><br>
+                                                    <a href="https://www.blog18.cn/archives/1852/"><text style="color:#7f0e32;"><b>>>手动修改打卡地点<<</b></text></a>
+                                                </div>
+                                                </p>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane" id="login">
+                                                <div class="row"><p></p><p></p><p></p></div>
+                                                <p>
+                                                <div style="text-align: center;">
+                                                    <text style="color:#7f0e32;"><b>可删除打卡账号</b></text><br>
+                                                    <text style="color:#7f0e32;"><b>修改打卡信息等</b></text><br>
+                                                    <a href="{{ url_for('user.user_info') }}"><text style="color:#00f7b5;"><b>》》点我进入后台《《</b></text></a>
+                                                </div>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <p></p><p></p><p>
+                            </p><p></p><p></p><p>
+
+                            </p><div class="panel-footer social-auth-links text-center row" style="margin-right: 0px;margin-left: 0px; margin-top: 5px;">
+                                <p class="alert alert-primary"><b>- {{ date }} 公告- </b><br>
+                                    <marquee behavior="behavior" width="100%" loop="5">{{ gonggao  }}</marquee>
+                                    {#                                    交流群：<a target="_blank" href="{{ QQGroupUrl }}"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="科技阳光跑3群" title="科技阳光跑3群"></a>#}
+                                </p>
+
+                            </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-7 col-sm-pull-4 sty5">
+
+                <div class="panel panel-default" style="box-shadow:0 40px 80px 0 rgba(0,0,0,0.3)">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"></h3><h1 style="text-align: bottom; color: #121212;"><span class="glyphicon glyphicon-tasks"></span><span style="text-shadow: 0px 0px 4px grey;">&nbsp;&nbsp;通知公告</span></h1>
+                    </div>
+                    <div class="panel-body" style="max-height: 526px;height: 526px;">
+                        <hr><h3>使用说明</h3><hr><p><span class="nes-text is-error">本项目只是为了省去每天烦躁的手动打卡操作<br>如果你本人确实是在风险地区出了问题后果自负</span><br>
+                        <span class="nes-text is-primary">根据你设置的打卡时间自动打卡<br>自动获取上次的打卡信息用于打卡<br>成功或失败会有邮件通知！</span><br>
+                        <span class="nes-text is-error">收不到邮件去看一下垃圾箱并把域名blog18.cn设置域名白名单</span></p>
+                        <p>添加域名白名单教程：<a href="https://service.mail.qq.com/cgi-bin/help?subtype=1&id=16&no=113">点我查看教程</a> </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--选择时间-->
+    <script type="text/javascript">
+        $('.clockpicker').clockpicker();
+    </script>
+    <!--加载按钮-->
+    <script type="text/javascript">
+        function check_add(){
+            $('#add_button').on('click', function(event){
+                layer.msg('提交中...', {
+                    anim: 3,
+                    icon: 16,
+                    time: 500,
+                    offset: '230px',
+                    shade: [0.8, '#393D49'],
+                });
+            })}
+        check_add();
+    </script>
+
+{% endblock %}

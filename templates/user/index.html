@@ -1,0 +1,416 @@
+{% extends "user/header.html" %}
+{% block title %}账号信息{% endblock %}
+{% block ico %}账号信息{% endblock %}
+
+{% block body %}
+
+    <!--加载按钮-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='dist/ladda-themeless.min.css')}}">
+    <script src="{{ url_for('static', filename='dist/spin.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='dist/ladda.min.js')}}"></script>
+    <!--按钮-->
+    <script src="{{ url_for('static', filename='js/user/button/button.js')}}"></script>
+    <!--验证码-->
+    <script src="{{ url_for('static', filename='js/user/emailcode/send_emailcode.js')}}"></script>
+    <!--提示框-->
+
+    <body>
+    <div class="alert alert-info hide" style="position: fixed; width: 50%; margin-left: 50%; z-index: 3000;"><span id="name"></span></div>
+    </body>
+
+    <!--登录提示-->
+    {% if login_method == 'login' %}
+        <script>$(".alert-success").addClass("show");window.setTimeout(function(){ $(".alert-success").removeClass("show");},2000);//显示的时间</script>
+    {% elif login_method == 'logined' %}
+        <div style="z-index: 3000;" class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4><strong>来了啊</strong></h4> 这次别走了，有你才叫江湖！
+        </div>
+    {% elif login_method == 'add' %}
+        <div style="z-index: 3000;" class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4><strong>欢迎新同学!</strong></h4> 验证邮件已发送至你的邮箱.
+        </div>
+    {% elif login_method == 'nadded' %}
+        <div style="z-index: 3000;" class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4><strong>Hello</strong></h4> 被你发现了哎！可是你还没提交账号呢！
+        </div>
+    {% endif %}
+
+    {% if dk_info == 0 %}
+        <div style="z-index: 3000;" class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4><strong>Hello</strong></h4> 你是新生，没有打卡记录，先去学校网站打卡一次<br>程序才能自动获取打卡信息帮你打卡！
+        </div>
+    {% endif %}
+
+    {% if email['state'] == 1 or user_state == 2 %}
+        <div class="alert alert-danger alert-dismissible fade in" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4><strong>未验证邮箱!</strong></h4>
+            <p>当前账号还未验证邮箱，请至邮箱<strong>{{ email['email'] }}</strong>中验证后方可正常使用.<br>收不到邮件去QQ网页邮箱把blog18.cn加域名白名单</p>
+            <p>1、前往QQ邮箱：<a href="https://mail.qq.com/">点我前往邮箱</a> </p>
+            <p>2、添加域名白名单教程：<a href="https://service.mail.qq.com/cgi-bin/help?subtype=1&id=16&no=113">点我查看教程</a> </p>
+            <p>
+                <button type="button" class="btn btn-default" id="xxsend">重发验证邮件</button>&nbsp;
+                <a href="{{ url_for('user.put_info') }}"><button type="button" class="btn btn-default" id="putemail">更改邮箱</button></a>
+            </p>
+        </div>
+    {% endif %}
+
+    {% if user_state == 5 or login_method == "nadded" %}
+        <div class="alert alert-danger alert-dismissible fade in" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4><strong>账号未提交!</strong></h4>
+            <p>当前登录账号[{{ xuehao }}]还未提交<strong><br></strong>请选择以下操作.</p>
+            <p>
+                <a href="{{ url_for('user.put_info') }}"><button type="button" class="btn btn-default" id="adduser">提交账号</button></a>&nbsp;
+                <a href="{{ url_for('user.login_out') }}"><button type="button" class="btn btn-default">退出登录</button></a>
+            </p>
+        </div>
+    {% endif %}
+    {#<div class="alert alert-danger alert-dismissible fade in" role="alert">#}
+    {#    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>#}
+    {#   <h4><strong>开学通知!</strong></h4>#}
+    {#    <p>开学将至想要修改打卡地址请点击下方按钮<br>修改地址后明天程序自动替换新地址<br>防止出现删除账号再添加的麻烦<br><p style="color: #0f6bd3"> 9.7-8号暂停自动打卡<br>后台【立即打卡】功能正常</p><strong><br></strong>请选择以下操作：</p>#}
+    {#    <p>#}
+    {#        <a href="https://www.blog18.cn/archives/1852/"><button type="button" class="btn btn-default">修改地址</button></a>&nbsp;#}
+    {#    </p>#}
+    {#</div>#}
+
+    {% if user_state == 6 or login_method == "nadded2" %}
+        <div class="alert alert-danger alert-dismissible fade in" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4><strong>账号未提交!</strong></h4>
+            <p>当前登录账号[{{ xuehao }}]还未提交<strong><br>
+            </strong>可是现在学校服务器关闭了<br>1.你的账号已被存储<br>2.在你设置的打卡时间：{{ dk_time }}<br>自动对你的账号进行验证<br>请关注收到的邮件！！<br>3.学校服务器大概早上会开机！！！</p>
+        </div>
+    {% endif %}
+    {% if user_state == 0  %}
+        <!--签到开始-->
+        {% if check_state %}
+            <a href="#" id="check_disabled" disabled="true" style="position:absolute; top: 90px; right: 0; border-top-right-radius: 15px; border-bottom-left-radius: 15px; " class="btn btn-success btn-sm ladda-button" data-style="zoom-in" data-size="l"><span class="glyphicon glyphicon-ok">今日已签到</span></a>
+        {% else %}
+            <a href="#" id="check_button" style=" position:absolute; top: 90px; right: 0; border-top-right-radius: 15px; border-bottom-left-radius: 15px; " class="btn btn-warning btn-sm ladda-button" data-style="zoom-in" data-size="l"><span class="glyphicon glyphicon-ok">今日未签到</span></a>
+        {% endif %}
+        <!--签到结束-->
+    {% endif %}
+
+    <p>
+        <img src="http://q2.qlogo.cn/headimg_dl?dst_uin={{ qqh }}&spec=100" class="center-block img-circle" width="60" height="60" alt="...">
+    </p>
+
+    <p class="text-center text-muted">[{{ clas }}]-{{ name }}</p>
+
+    {% if user_state == 0 %}
+        {% if DKTimeUserNum > 50 %}
+            {#        通打卡时间人数过多提示开始#}
+            <div class="alert alert-warning alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>提示!</strong> 与你同时间的打卡人数已达到{{ DKTimeUserNum }}人<br>已为你修改较少人数的打卡时间，请刷新查看
+            </div>
+            {#        通打卡时间人数过多提示结束#}
+        {% endif %}
+    {% endif %}
+
+    <ul class="list-group">
+        <li class="list-group-item clearfix">
+            {%  if user_state == 0 %}
+                <span class="label label-success pull-right">有效</span>
+            {%  elif user_state == 1 %}
+                <span class="label label-warning pull-right">无效</span>
+            {% elif user_state == 2 %}
+                <span class="label label-info pull-right">待验证</span>
+            {%  elif user_state == 3 or user_state == 4%}
+                <span class="label label-danger pull-right">已删除</span>
+            {%  elif user_state == 5 or user_state == 6 %}
+                <span class="label label-danger pull-right">未提交</span>
+            {% endif %}
+            <span class="label label-default pull-right">{{ xuehao }}</span>
+            <span data-toggle="collapse" href="#user_state-aria" aria-expanded="false" aria-controls="user_state-aria">账号状态</span>
+            <div class="collapse" id="user_state-aria">
+                <div class="well">
+                    当前账号的状态<br>
+                    特殊情况说明：<br>
+                    无效：说明你的账号密码错了，重新在功能区-打卡设置里提交你正确的学生工作台密码即可<br>
+                    待验证：你的邮箱还未得到验证<br>
+                    已删除：你的账号已经被你删除了，使用不了任何功能，充新提交即可<br>
+                    未提交：说明你是直接通过登录用户后台进来的，可以根据后台提示直接提交账号
+                </div>
+            </div>
+        </li>
+
+        {% if user_state != 5 and user_state != 6 %}
+            <li class="list-group-item clearfix">
+                <span style='line-height:100%' data-toggle="collapse" href="#email_state-aria" aria-expanded="false" aria-controls="email_state-aria">绑定邮箱</span>
+                {% if email['state'] == 0 %}
+                    <span class="label label-success pull-right">已验证</span>
+                {%  elif email['state'] == 1 %}
+                    <span id='biaoqian' class="label label-warning pull-right"><a href="#"><text style="color: #0f6bd3"><b>待验证</b></text></a></span>
+                {%  endif %}
+                <span class="label label-default pull-right">{{email['email']}}</span>
+                <div class="collapse" id="email_state-aria">
+                    <div class="well">
+                        1.你绑定的邮箱;<br>作用：用于打卡邮件和邮件公告通知<br>
+                        2.邮箱的验证状态
+                    </div>
+                </div>
+            </li>
+
+            {% if user_state == 0 %}
+                <li class="list-group-item clearfix">
+                    <span class="label label-default pull-right">{% if qqh %}{{ qqh }}{% else %}<a style="color: #f0ad4e" href="{{ url_for('user.put_info') }}">点我绑定</a>{% endif %}</span>
+                    <span class="bi-qr-code-scan" data-toggle="collapse" href="#qqh-aria" aria-expanded="false" aria-controls="qqh-aria">绑定QQ</span>
+                    <div class="collapse" id="qqh-aria">
+                        <div class="well">
+                            1.你在本系统绑定的QQ号<br>
+                            2.用于QQ群内积分活动账号关联和显示系统头像的作用
+                        </div>
+                    </div>
+                </li>
+
+
+                <li class="list-group-item clearfix">
+                    <span class="label label-warning pull-right" id="dk_num">{{ dk_num }}次</span>
+                    <span data-toggle="collapse" href="#dk_num-aria" aria-expanded="false" aria-controls="dk_num-aria">累计打卡</span>
+                    <div class="collapse" id="dk_num-aria">
+                        <div class="well">
+                            你在本系统累计自动疫情打卡的次数
+                        </div>
+                    </div>
+                </li>
+
+                <li class="list-group-item clearfix">
+                    <span class="label label-warning pull-right" id="DKTimeUserNum">{{ DKTimeUserNum }}人</span>
+                    <span class="label label-warning pull-right" id="dk_time">{{ dk_time }}</span>
+                    <span data-toggle="collapse" href="#dk_time_user_num-aria" aria-expanded="false" aria-controls="dk_time_user_num-aria">打卡时间/人数</span>
+                    <div class="collapse" id="dk_time_user_num-aria">
+                        <div class="well">
+                            1.你设置的自动打卡时间，改时间可在功能区-打卡设置里面修改打卡时间<br>
+                            2.与你同一打卡时间的人数,超过设定人数会自动为你改到下一个时间
+                        </div>
+                    </div>
+                </li>
+
+                <li class="list-group-item clearfix">
+                    <span class="label label-primary pull-right">{{ last_dk_time }}</span>
+                    <span data-toggle="collapse" href="#last_dk_time-aria" aria-expanded="false" aria-controls="last_dk_time-aria">上次打卡</span>
+                    <div class="collapse" id="last_dk_time-aria">
+                        <div class="well">
+                            最后一次在本系统自动疫情打卡的时间
+                        </div>
+                    </div>
+                </li>
+            {% endif %}
+
+            <li class="list-group-item clearfix">
+                <span class="label label-success pull-right">{{ date }}</span>
+                <span data-toggle="collapse" href="#join_date-aria" aria-expanded="false" aria-controls="join_date-aria">{% if user_state == 0 or user_state == 1 %} 加入时间 {% elif user_state == 2 %} 提交时间 {% elif user_state == 3 or user_state == 4%} 删除时间 {% endif %}</span>
+                <div class="collapse" id="join_date-aria">
+                    <div class="well">
+                        你提交账号的时间
+                    </div>
+                </div>
+            </li>
+
+
+
+
+
+        {% endif %}
+    </ul>
+    <br>
+    <div class="panel panel-">
+        <div class="panel-heading">
+            <i class="glyphicon glyphicon-question-sign pull-right" data-toggle="modal" data-target="#myModal"></i>
+            <h2 class="panel-title">功能</h2>
+            <hr>
+            {% if user_state == 0 %}
+                <div class="col-md-12">
+                    <a href="{{ url_for('user.put_info') }}" id="put_info" class="btn btn-info btn-sm ladda-button" data-style="zoom-in" data-size="l"><span class="glyphicon glyphicon-wrench">打卡设置</span></a>
+                    <a href="#" id="user_dk" class="btn btn-primary btn-sm ladda-button" data-style="zoom-in" data-size="l"><span class="glyphicon glyphicon-check">立即打卡</span></a>
+                    <a href="#" id="bt_fk" class="btn btn-warning btn-sm ladda-button" data-toggle="modal" data-target="#fankui" data-style="zoom-in" data-size="l"><span class="glyphicon glyphicon-send">建议反馈</span></a>
+                    <a href="#" id="user_del" class="btn btn-danger btn-sm ladda-button" data-toggle="modal" data-target="#userdel" data-style="zoom-in" data-size="l"><span class="glyphicon glyphicon-alert">删除账号</span></a>
+
+                </div>
+            {% else %}
+                <h2>账号异常！</h2>
+            {% endif %}
+            <hr>
+        </div>
+
+    </div>
+
+    {% if not user_state == 6 %}
+        <div class="panel panel-">
+            <div class="panel-heading">
+                <i class="glyphicon glyphicon-question-sign pull-right" data-toggle="modal" data-target="#myModal"></i>
+                <h2 class="panel-title">友人墙</h2>
+            </div>
+            <div class="panel-body">
+                <p>
+                    {% for friend_qqh in friends_list %}
+                        <img src="http://q2.qlogo.cn/headimg_dl?dst_uin={{ friend_qqh }}&spec=100" class="left-block img-circle" width="30" height="30" alt="...">
+                    {% endfor %}
+                </p>
+            </div>
+
+        </div>
+    {% endif %}
+
+
+    <div class="panel panel-">
+        <div class="panel-heading">
+            <i class="glyphicon glyphicon-question-sign pull-right" data-toggle="modal" data-target="#myModal"></i>
+            <h2 class="panel-title">公告</h2>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-warning life" role="alert">
+                        <p>欢迎来到后台管理界面</p>
+                        <p>1.网站导航-更改信息 可更改邮箱、密码、打卡时间、QQ号</p>
+                        <p>更多功能正在开发...</p>
+                        <p>{{ gonggao }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% if user_state == 0 %}
+        <!-- 反馈弹窗-->
+        <div class="modal fade" id="fankui" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <h4 class="modal-title" id="exampleModalLabel">反馈</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="fk_subject" class="control-label">主题:</label>
+                                <input type="text" class="form-control" id="fk_subject" placeholder="打卡问题还是？" name="fk_subject" onkeyup="value=value.replace(/\s+/g, '')">
+                            </div>
+                            <div class="form-group">
+                                <label for="fk_content" class="control-label">问题描述:</label>
+                                <textarea type="text" class="form-control" id="fk_content" placeholder="输入发生的问题或者建议" name="fk_content" onkeyup="value=value.replace(/\s+/g, '')"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" id="send_fk" class="btn btn-primary" data-dismiss="modal">提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {#删除账号弹窗#}
+        <div class="modal fade" id="userdel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <h4 class="modal-title" id="deluserwindow">删除账号</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="del_content" class="control-label">原因:</label>
+                                <textarea type="text" class="form-control" id="del_content" placeholder="概述删除的原因" onkeyup="value=value.replace(/\s+/g, '')" name="del_content"></textarea>
+                            </div>
+                        </form>
+                        <p style="color: #8c0615">删除后果：<br>1、不会再自动打卡了<br>2、会清除账户资产<br>3、不能使用本站功能</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" id="del_user" class="btn btn-primary" data-dismiss="modal">提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="add-qj-pool" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <h4 class="modal-title" id="deluserwindow">加入请假计划-已有{{ PoolUserNum }}人加入</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p style="color: #8c0615"><strong>加入须知：</strong><br>
+                            <strong>本学期不会执行，只统计报名人数，如果人数少，就不搞请假了</strong><br>
+                            <strong>起因：</strong><br>
+                            因学校在门口增加了扫描请假码的机器，所有假的请假码都不能使用<br>
+                            也就是说只能用学校的请假码才能出去<br>
+                            <strong>本次计划的内容：</strong><br>
+                            组建一支请假队伍，每天从中抽取少部分人进行请假申请<br>
+                            <strong>发生的两种情况：</strong><br>
+                            1.申请后在班主任或者辅导员那里不通过<br>
+                            2.申请后经过老师审核同意了请假要求<br>
+                            申请通过的账号，我会给该用户增加一定数量的免费请假机会；<br>
+                            而他的请假码将会被系统拿来公其他用户出校和返校使用(依然使用我们的请假系统来显示使用者的信息，只是二维码不是你的)<br>
+                            <strong>关于请假时间</strong><br>
+                            由于是学校请假，所以请假时间会控制在正常范围内，时间也会根据疫情状态响应的修改
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" id="add_pool" class="btn btn-primary" data-dismiss="modal" onclick="add_qj_pool()">同意加入</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+
+    <script type="text/javascript">
+        var isLoaded = false;
+        function reqs() {
+            $.ajax({
+                type: 'post',
+                url: '{{ url_for("user.user_info_ajax") }}',
+                dataType: 'json',
+                beforeSend: function() {
+                    isLoaded = false;
+                },
+                success: function(res) {
+                    console.log(res);
+                    // 处理信息
+                    if({{ user_state }} !== 0){
+                        if(res.state === 0){
+                            console.log("用户已注册,刷新后台")
+                            window.location.href = "{{ url_for('user.user_info') }}"
+                        } else{
+                            console.log("用户未注册")
+                        }
+                    } else{
+                        console.log("用户状态有效")
+                        {#设置用户信息#}
+                        document.getElementById("credit").innerHTML  = res.user.credit+'个';
+                        document.getElementById("DKTimeUserNum").innerHTML  = res.user.DKTimeUserNum+'人';
+                        document.getElementById("dk_time").innerHTML  = res.user.dk_time;
+                        document.getElementById("dk_num").innerHTML  = res.user.dk_num+'次';
+
+                    }
+
+                complete: function() {
+                    isLoaded = true;
+                },
+                error: function() {
+                    console.log('请求失败~');
+                }
+            });
+        }
+        reqs();
+        setInterval(function() {
+            isLoaded && reqs();
+        }, 5000);
+
+    </script>
+
+{% endblock %}
+

@@ -1,0 +1,333 @@
+/*配合col-ss-使用，和col-xs-样式一样，但是col-xs-是在bootstrap中，会使col-ss-不起作用*/
+/* .col-xss-1, .col-sm-1, .col-md-1, .col-lg-1, 
+.col-xss-2, .col-sm-2, .col-md-2, .col-lg-2, 
+.col-xss-3, .col-sm-3, .col-md-3, .col-lg-3, 
+.col-xss-4, .col-sm-4, .col-md-4, .col-lg-4, 
+.col-xss-5, .col-sm-5, .col-md-5, .col-lg-5, 
+.col-xss-6, .col-sm-6, .col-md-6, .col-lg-6, 
+.col-xss-7, .col-sm-7, .col-md-7, .col-lg-7, 
+.col-xss-8, .col-sm-8, .col-md-8, .col-lg-8, 
+.col-xss-9, .col-sm-9, .col-md-9, .col-lg-9, 
+.col-xss-10, .col-sm-10, .col-md-10, .col-lg-10, 
+.col-xss-11, .col-sm-11, .col-md-11, .col-lg-11, 
+.col-xss-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+} */
+.col-xss-1, .col-xss-2, .col-xss-3, .col-xss-4, .col-xss-5, .col-xss-6, .col-xss-7, .col-xss-8, .col-xss-9, .col-xss-10, .col-xss-11, .col-xss-12 {
+  float: left;
+}
+.col-xss-12 {
+  width: 100%;
+}
+.col-xss-11 {
+  width: 91.66666667%;
+}
+.col-xss-10 {
+  width: 83.33333333%;
+}
+.col-xss-9 {
+  width: 75%;
+}
+.col-xss-8 {
+  width: 66.66666667%;
+}
+.col-xss-7 {
+  width: 58.33333333%;
+}
+.col-xss-6 {
+  width: 50%;
+}
+.col-xss-5 {
+  width: 41.66666667%;
+}
+.col-xss-4 {
+  width: 33.33333333%;
+}
+.col-xss-3 {
+  width: 25%;
+}
+.col-xss-2 {
+  width: 16.66666667%;
+}
+.col-xss-1 {
+  width: 8.33333333%;
+}
+.col-xss-pull-12 {
+  right: 100%;
+}
+.col-xss-pull-11 {
+  right: 91.66666667%;
+}
+.col-xss-pull-10 {
+  right: 83.33333333%;
+}
+.col-xss-pull-9 {
+  right: 75%;
+}
+.col-xss-pull-8 {
+  right: 66.66666667%;
+}
+.col-xss-pull-7 {
+  right: 58.33333333%;
+}
+.col-xss-pull-6 {
+  right: 50%;
+}
+.col-xss-pull-5 {
+  right: 41.66666667%;
+}
+.col-xss-pull-4 {
+  right: 33.33333333%;
+}
+.col-xss-pull-3 {
+  right: 25%;
+}
+.col-xss-pull-2 {
+  right: 16.66666667%;
+}
+.col-xss-pull-1 {
+  right: 8.33333333%;
+}
+.col-xss-pull-0 {
+  right: auto;
+}
+.col-xss-push-12 {
+  left: 100%;
+}
+.col-xss-push-11 {
+  left: 91.66666667%;
+}
+.col-xss-push-10 {
+  left: 83.33333333%;
+}
+.col-xss-push-9 {
+  left: 75%;
+}
+.col-xss-push-8 {
+  left: 66.66666667%;
+}
+.col-xss-push-7 {
+  left: 58.33333333%;
+}
+.col-xss-push-6 {
+  left: 50%;
+}
+.col-xss-push-5 {
+  left: 41.66666667%;
+}
+.col-xss-push-4 {
+  left: 33.33333333%;
+}
+.col-xss-push-3 {
+  left: 25%;
+}
+.col-xss-push-2 {
+  left: 16.66666667%;
+}
+.col-xss-push-1 {
+  left: 8.33333333%;
+}
+.col-xss-push-0 {
+  left: auto;
+}
+.col-xss-offset-12 {
+  margin-left: 100%;
+}
+.col-xss-offset-11 {
+  margin-left: 91.66666667%;
+}
+.col-xss-offset-10 {
+  margin-left: 83.33333333%;
+}
+.col-xss-offset-9 {
+  margin-left: 75%;
+}
+.col-xss-offset-8 {
+  margin-left: 66.66666667%;
+}
+.col-xss-offset-7 {
+  margin-left: 58.33333333%;
+}
+.col-xss-offset-6 {
+  margin-left: 50%;
+}
+.col-xss-offset-5 {
+  margin-left: 41.66666667%;
+}
+.col-xss-offset-4 {
+  margin-left: 33.33333333%;
+}
+.col-xss-offset-3 {
+  margin-left: 25%;
+}
+.col-xss-offset-2 {
+  margin-left: 16.66666667%;
+}
+.col-xss-offset-1 {
+  margin-left: 8.33333333%;
+}
+.col-xss-offset-0 {
+  margin-left: 0;
+}
+/*增强bootstrap.css, 需要放在bootstrap之前*/
+@media (min-width: 480px) {
+  .col-ss-1, .col-ss-2, .col-ss-3, .col-ss-4, .col-ss-5, .col-ss-6, .col-ss-7, .col-ss-8, .col-ss-9, .col-ss-10, .col-ss-11, .col-ss-12 {
+    float: left;
+  }
+  .col-ss-12 {
+    width: 100%;
+  }
+  .col-ss-11 {
+    width: 91.66666667%;
+  }
+  .col-ss-10 {
+    width: 83.33333333%;
+  }
+  .col-ss-9 {
+    width: 75%;
+  }
+  .col-ss-8 {
+    width: 66.66666667%;
+  }
+  .col-ss-7 {
+    width: 58.33333333%;
+  }
+  .col-ss-6 {
+    width: 50%;
+  }
+  .col-ss-5 {
+    width: 41.66666667%;
+  }
+  .col-ss-4 {
+    width: 33.33333333%;
+  }
+  .col-ss-3 {
+    width: 25%;
+  }
+  .col-ss-2 {
+    width: 16.66666667%;
+  }
+  .col-ss-1 {
+    width: 8.33333333%;
+  }
+  .col-ss-pull-12 {
+    right: 100%;
+  }
+  .col-ss-pull-11 {
+    right: 91.66666667%;
+  }
+  .col-ss-pull-10 {
+    right: 83.33333333%;
+  }
+  .col-ss-pull-9 {
+    right: 75%;
+  }
+  .col-ss-pull-8 {
+    right: 66.66666667%;
+  }
+  .col-ss-pull-7 {
+    right: 58.33333333%;
+  }
+  .col-ss-pull-6 {
+    right: 50%;
+  }
+  .col-ss-pull-5 {
+    right: 41.66666667%;
+  }
+  .col-ss-pull-4 {
+    right: 33.33333333%;
+  }
+  .col-ss-pull-3 {
+    right: 25%;
+  }
+  .col-ss-pull-2 {
+    right: 16.66666667%;
+  }
+  .col-ss-pull-1 {
+    right: 8.33333333%;
+  }
+  .col-ss-pull-0 {
+    right: auto;
+  }
+  .col-ss-push-12 {
+    left: 100%;
+  }
+  .col-ss-push-11 {
+    left: 91.66666667%;
+  }
+  .col-ss-push-10 {
+    left: 83.33333333%;
+  }
+  .col-ss-push-9 {
+    left: 75%;
+  }
+  .col-ss-push-8 {
+    left: 66.66666667%;
+  }
+  .col-ss-push-7 {
+    left: 58.33333333%;
+  }
+  .col-ss-push-6 {
+    left: 50%;
+  }
+  .col-ss-push-5 {
+    left: 41.66666667%;
+  }
+  .col-ss-push-4 {
+    left: 33.33333333%;
+  }
+  .col-ss-push-3 {
+    left: 25%;
+  }
+  .col-ss-push-2 {
+    left: 16.66666667%;
+  }
+  .col-ss-push-1 {
+    left: 8.33333333%;
+  }
+  .col-ss-push-0 {
+    left: auto;
+  }
+  .col-ss-offset-12 {
+    margin-left: 100%;
+  }
+  .col-ss-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .col-ss-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .col-ss-offset-9 {
+    margin-left: 75%;
+  }
+  .col-ss-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .col-ss-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .col-ss-offset-6 {
+    margin-left: 50%;
+  }
+  .col-ss-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .col-ss-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .col-ss-offset-3 {
+    margin-left: 25%;
+  }
+  .col-ss-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .col-ss-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .col-ss-offset-0 {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,88 @@
+{% extends "user/header.html" %}
+{%  block title %}{% if user_state == 5 %}设置信息{% else %}更改用户信息{% endif %}{%  endblock%}
+{%  block ico %}{% if user_state == 5 %}设置信息{% else %}更改用户信息{% endif %}{%  endblock%}
+{% block body%}
+{% if user_state != 6 %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/clock/bootstrap-clockpicker.css')}}">
+<script src="{{ url_for('static', filename='js/clock/bootstrap-clockpicker.js')}}"></script>
+<script src="{{ url_for('static', filename='js/user/info/put_info.js')}}"></script>
+
+
+<!--提示框-->
+<body>
+<div class="alert alert-info hide" style="position: fixed; width: 50%; margin-left: 50%; z-index: 3000;"><span id="name"></span></div>
+</body>
+<div>
+    <div class="col-md-6 col-md-offset-3">
+        <div class="col-sm-6">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{% if user_state == 5 %}设置信息{% else %}更改信息{% endif %}</h3>
+
+                </div>
+                <div class="panel-body">
+                    {% if user_state != 3 %}
+                    <form role="form" action="#">
+
+                        <input type="hidden" class="form-control" name="user_state" id="user_state" value="{{ user_state }}">
+                        <input type="hidden" class="form-control" name="xuehao" id="xuehao" value="{{ xuehao }}">
+
+                        <div class="form-group">
+                            <label for="email">邮箱:</label>
+                            <input type="email" class="form-control" name="email" onkeyup="value=value.replace(/\s+/g, '')" id="email" placeholder="输入你的邮箱" value="{% if user_state != 5 %}{{ email['email'] }}{% endif %}">
+                        </div>
+
+
+                        <div class="form-group" {% if user_state == 2 %}hidden="hidden"{% endif %}>
+                            <label for="password">打卡密码:</label>
+                            <input type="password" class="form-control" name="password" onkeyup="value=value.replace(/\s+/g, '')" id="password" placeholder="输入你的新密码" value="{{ password }}">
+                        </div>
+
+                        {% if not user_state == 5 %}
+                        <div class="form-group">
+                            <label for="qqh">QQ号:</label>
+                            <input type="text" class="form-control" name="qqh" onkeyup="value=value.replace(/\s+/g, '')" id="qqh" placeholder="输入你的企鹅号" value="{{ qqh }}">
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="room_num">宿舍号:</label>
+                            <input type="text" class="form-control" name="room_num" onkeyup="value=value.replace(/\s+/g, '')" id="room_num" placeholder="比如7122,走读可不填！" value="{{ room_num }}">
+                        </div>
+
+                        {% endif %}
+                        <div class="form-group">
+                            <label for="dk_time">打卡时间:</label>
+                            <div class="input-group clockpicker" data-autoclose="true">
+                                <input type="text" maxlength="0" id="dk_time" name="dk_time" onkeyup="value=value.replace(/\s+/g, '')" class="form-control" value="{{ dk_time }}">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-time"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <button type="button" id="put_info" class="btn btn-success btn-single">{% if user_state == 5 %}提交{% else %}保存{% endif %}</button>
+                        </div>
+                    </form>
+                    {% else %}
+                    <h2>被删除用户不能修改信息</h2>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('.clockpicker').clockpicker()
+        .find('input').change(function(){
+        // TODO：时间改变
+        console.log(this.value);
+    });
+</script>
+{% else %}
+<h2>你不能修改信息</h2>
+{% endif %}
+{% endblock %}
