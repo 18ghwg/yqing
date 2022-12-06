@@ -1,0 +1,49 @@
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+	<title>{{data.title}}</title>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+</head>
+<body style="background-color: #EBEDEF;">
+<table name="bmeMainColumnParentTable" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; border-spacing: 0px;" width="100%"><tbody><tr><td name="bmeMainColumnParent" style="border-collapse: separate; border-color: transparent; border-width: 0; border-style: none; border-radius: 0; border-spacing: 0; overflow: visible;"><table name="bmeMainColumn" class="bmeMainColumn" style="max-width: 100%; overflow: visible; border-color: transparent; border-width: 0px; border-style: none; border-radius: 0px; border-collapse: separate; border-spacing: 0px;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%"> <tbody> <tr><td name="bmeMainContentParent" class="bmeHolder" align="center" valign="top" width="100%" style="border-collapse: separate; border-color: transparent; border-radius: 0px; border-spacing: 0px; border-width: 0px; border-style: none; overflow: hidden;"><table name="bmeMainContent" style="border-radius: 0px; border-collapse: separate; border-spacing: 0px; overflow: visible; border-color: transparent; border-width: 0px; border-style: none;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%"> <tbody><tr id="section_2" class="flexible-section" data-columns="1"><td class="blk_container bmeHolder" name="bmeHeader" align="center" valign="top" width="100%" bgcolor="#009900" style="background-color: #{{data.color}}"><div id="dv_3" class="blk_wrapper"><table width="280" cellspacing="0" cellpadding="0" border="0" class="blk" name="blk_divider" style=""><tbody><tr><td class="tblCellMain" style="padding: 35px 20px;"><table class="tblLine" cellspacing="0" cellpadding="0" border="0" width="100%" style="border-top-width: 0px; border-top-style: none; min-width: 1px;"><tbody><tr><td><span></span></td></tr></tbody></table></td></tr></tbody></table></div><div id="dv_19" class="blk_wrapper" style=""><table width="200" cellspacing="0" cellpadding="0" border="0" class="blk" name="blk_text"><tbody><tr><td><table cellpadding="0" cellspacing="0" border="0" width="100%" class="bmeContainerRow"><tbody><tr><th class="tdPart" valign="top" align="center"><table cellspacing="0" cellpadding="0" border="0" width="280" name="tblText" class="tblText" style="float:left; background-color:transparent;" align="left"><tbody><tr><td valign="top" align="left" name="tblCell" class="tblCell" style="padding: 20px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 280; color: {{data.color}}; text-align: left; word-break: break-word;"><div style="line-height: 125%; text-align: center;"><span style="font-family: Helvetica, Arial, sans-serif; color: #ffffff; font-size: 25px; line-height: 125%;"><strong><pre>{{data.count}}<br>----------------</pre><span id={{data.span}}></span></strong></span></div></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></div><div id="dv_1" class="blk_wrapper" style=""><table width="280" cellspacing="0" cellpadding="0" border="0" class="blk" name="blk_divider" style=""><span style="font-family: Helvetica, Arial, sans-serif; color: 	rgb(152,238,149); font-size: 24px; line-height: 125%;"><strong>yqing.blog18.cn</strong></span><tbody><tr><td class="tblCellMain" style="padding-top:20px; padding-bottom:20px;padding-left:20px;padding-right:20px;"><table class="tblLine" cellspacing="0" cellpadding="0" border="0" width="100%" style="border-top: 1px solid {{data.color}}; min-width: 1px;"><tbody><tr><td><span></span></td></tr></tbody></table></td></tr></tbody></table></div><div id="dv_24" class="blk_wrapper"><table width="280" cellspacing="0" cellpadding="0" border="0" class="blk" name="blk_divider" style=""><tbody><tr><td class="tblCellMain" style="padding: 10px 20px;"><table class="tblLine" cellspacing="0" cellpadding="0" border="0" width="100%" style="border-top-width: 0px; border-top-style: none; min-width: 1px;"><tbody><tr><td><span></span></td></tr></tbody></table></td></tr></tbody></table></div><div id="dv_11" class="blk_wrapper" style=""><table width="280" cellspacing="0" cellpadding="0" border="0" class="blk" name="blk_button" style=""><tbody><tr><td width="20"></td><td align="center"><table class="tblContainer" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td height="10"></td></tr><tr><td><span></span></td></tr></tbody></table></td></tr></tbody></table></div></td></tr>   </tbody></table> </td></tr> </tbody></table></td></tr></tbody></table>
+<div id="NR_CHROME_EXTENSIONS" style="display: none;"></div>
+<script>
+	var t1=6;//设定跳转的时间
+	setInterval("refer1()",1000); //启动1秒定时
+	function refer1(){
+		if(t1===0){
+			location="../"; //#设定跳转的链接地址
+		}
+		document.getElementById('show').innerHTML=""+t1+"秒后返回！"; // 显示倒计时
+		t1--; // 计数器递减
+	}
+</script>
+<script>
+	var t2=3;//设定跳转的时间
+	setInterval("refer2()",1000); //启动1秒定时
+	function refer2(){
+		if(t2===0){
+			location="{% autoescape false %}{{ QQGroupUrl }}{% endautoescape %}"; //#设定跳转的链接地址
+		}
+		document.getElementById('jiaqun').innerHTML=""+t2+"秒后加群！"; // 显示倒计时
+		t2--; // 计数器递减
+	}
+
+</script>
+<script>
+	var t3=3;//设定跳转的时间
+	setInterval("refer3()",1000); //启动1秒定时
+	function refer3(){
+		if(t3===0){
+			location="{% autoescape false %}{{data.url}}{% endautoescape %}"; //#设定跳转的链接地址
+		}
+		document.getElementById('jump').innerHTML=""+t3+"秒后前往！"; // 显示倒计时
+		t3--; // 计数器递减
+	}
+</script>
+</body>
+</html>

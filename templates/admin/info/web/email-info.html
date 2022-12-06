@@ -1,0 +1,241 @@
+{% extends "admin/header.html" %}
+{% block title %}Web设置{% endblock %}
+{% block  body%}
+    <!--内容区域-->
+    <div class="bsa-main-wrapper">
+        <div class="bsa-main-content">
+            <!-- 内容都应该被包裹在此-->
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h5 class="card-title">邮件信息配置</h5>
+                    <hr>
+                    <form action="#" id="form" class="row g-3">
+                        <div class="card-title d-flex align-items-center">
+                            <div><i class="bi bi-send me-1 bsa-font-20 text-primary"></i>
+                            </div>
+                            <h5 class="mb-0 text-primary">邮件信息</h5>
+                        </div>
+                        <hr>
+                        <div class="col-md-6">
+                            <label for="SendEmailUser" class="form-label">发送邮箱账号</label>
+                            <input type="text" class="form-control" id="SendEmailUser" name="SendEmailUser" value="{{ SendEmailUser }}">
+                            <div id="emailHelp" class="form-text">发送邮件的宝塔邮箱账号</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="SendEmailPassword" class="form-label">发送邮箱密码</label>
+                            <input type="text" class="form-control" id="SendEmailPassword" name="SendEmailPassword" value="{{ SendEmailPassword  }}">
+                            <div id="emailHelp" class="form-text">发送邮件的宝塔邮箱密码</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="SendEmailStmp" class="form-label">邮箱的服务器地址</label>
+                            <input type="text" class="form-control" id="SendEmailStmp" name="SendEmailStmp" value="{{ SendEmailStmp }}">
+                            <div id="emailHelp" class="form-text">比如网易邮箱：smtp.163.com</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="SendEmailPort" class="form-label">发送邮箱的端口</label>
+                            <input type="text" class="form-control" id="SendEmailPort" name="SendEmailPort" value="{{ SendEmailPort  }}">
+                            <div id="emailHelp" class="form-text">邮件服务器的端口比如：465、80</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="AdminEmail" class="form-label">管理员邮箱</label>
+                            <input type="text" class="form-control" id="AdminEmail" name="AdminEmail" value="{{ AdminEmail  }}">
+                            <div id="emailHelp" class="form-text">用于接收邮件反馈等通知</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="SendEmailMaxNum" class="form-label">验证邮件的最大发送次数</label>
+                            <input type="text" class="form-control" id="SendEmailMaxNum" name="SendEmailMaxNum" value="{{ SendEmailMaxNum }}">
+                            <div id="emailHelp" class="form-text">用户邮箱验证的最大次数,超过就不会给用户发送验证邮件</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="SendFailMaxNum" class="form-label">邮件拒收的最大数量</label>
+                            <input type="text" class="form-control" id="SendFailMaxNum" name="SendFailMaxNum" value="{{ SendFailMaxNum }}">
+                            <div id="emailHelp" class="form-text">用户拒收邮箱的最大数量，超过就会被清理账号</div>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="emailcontent" class="form-label">邮件公告</label>
+                            <textarea id="emailcontent_temp" name="emailcontent_temp"
+                                      style="position: fixed;top:-100%" aria-label="邮件公告">{{ EmailGG }}</textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">保存</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='admin/lib/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='admin/lib/tinymce/tinymce.min.js') }}"></script>
+    <script>
+        tinymce.init({
+            language: 'zh-Hans',
+            selector: '#emailcontent_temp',
+            plugins: 'preview importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap pagebreak nonbreaking anchor insertdatetime advlist lists wordcount help charmap quickbars emoticons',
+            editimage_cors_hosts: ['picsum.photos'],
+            menubar: 'file edit view insert format tools table help',
+            toolbar: 'undo redo | bold italic underline strikethrough | fontfamily fontsize blocks | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | ltr rtl',
+
+            toolbar_sticky: false,
+            //当toolbar_sticky设置为true时生效
+            toolbar_sticky_offset: 108,
+            //如果写了内容页面刷新前询问是否退出
+            autosave_ask_before_unload: false,
+            autosave_interval: '30s',
+            autosave_prefix: '{path}{query}-{id}-',
+            autosave_restore_when_empty: false,
+            autosave_retention: '2m',
+            image_advtab: true,
+            branding: false,
+            link_list: [
+                {title: 'My page 1', value: 'https://www.tiny.cloud'},
+                {title: 'My page 2', value: 'http://www.moxiecode.com'}
+            ],
+            image_list: [
+                {title: 'My page 1', value: 'https://www.tiny.cloud'},
+                {title: 'My page 2', value: 'http://www.moxiecode.com'}
+            ],
+            image_class_list: [
+                {title: 'None', value: ''},
+                {title: 'Some class', value: 'class-name'}
+            ],
+            importcss_append: true,
+            file_picker_callback: (callback, value, meta) => {
+                /* Provide file and text for the link dialog */
+                if (meta.filetype === 'file') {
+                    callback('https://www.google.com/logos/google.jpg', {text: 'My text'});
+                }
+
+                /* Provide image and alt text for the image dialog */
+                if (meta.filetype === 'image') {
+                    callback('https://www.google.com/logos/google.jpg', {alt: 'My alt text'});
+                }
+
+                /* Provide alternative source and posted for the media dialog */
+                if (meta.filetype === 'media') {
+                    callback('movie.mp4', {source2: 'alt.ogg', poster: 'https://www.google.com/logos/google.jpg'});
+                }
+            },
+            templates: [
+                {
+                    title: 'New Table',
+                    description: 'creates a new table',
+                    content: '<div class="mceTmpl"><table width="98%%"  border="0" cellspacing="0" cellpadding="0"><tr><th scope="col"> </th><th scope="col"> </th></tr><tr><td> </td><td> </td></tr></table></div>'
+                },
+                {title: 'Starting my story', description: 'A cure for writers block', content: 'Once upon a time...'},
+                {
+                    title: 'New list with dates',
+                    description: 'New List with dates',
+                    content: '<div class="mceTmpl"><span class="cdate">cdate</span><br><span class="mdate">mdate</span><h2>My List</h2><ul><li></li><li></li></ul></div>'
+                }
+            ],
+            template_cdate_format: '[Date Created (CDATE): %m/%d/%Y : %H:%M:%S]',
+            template_mdate_format: '[Date Modified (MDATE): %m/%d/%Y : %H:%M:%S]',
+            height: 300,
+            image_caption: true,
+            quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
+            noneditable_class: 'mceNonEditable',
+            toolbar_mode: 'sliding',
+            contextmenu: 'link image table',
+            skin: 'oxide', //oxide  oxide-dark
+            content_css: 'default', //dark default
+            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }',
+            setup: (editor) => {
+                editor.on('init', (e) => {
+                    console.log('tinymce-init');
+                });
+            },
+            init_instance_callback: (editor) => {
+                editor.on('input paste ExecCommand', (e) => {
+                    $('#emailcontent_temp').val(tinyMCE.activeEditor.getContent()).trigger('input');
+                });
+            }
+        });
+    </script>
+    <!--表单验证相关依赖-->
+    <script src="{{ url_for('static', filename='admin/lib/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='admin/lib/formvalidation/js/formValidation.js') }}"></script>
+    <script src="{{ url_for('static', filename='admin/lib/formvalidation/js/framework/bootstrap.js') }}"></script>
+    <script src="{{ url_for('static', filename='admin/lib/formvalidation/js/language/zh_CN.js') }}"></script>
+    <script>
+        //前端表单验证
+        $('#form').formValidation({
+            fields: {
+                AdminEmail: {
+                    validators: {
+                        notEmpty: true,
+                    }
+                },
+                SendEmailUser: {
+                    validators: {
+                        notEmpty: true,
+                    }
+                },
+                SendEmailPassword: {
+                    validators: {
+                        notEmpty: true,
+                    }
+                },
+                SendEmailMaxNum: {
+                    validators: {
+                        notEmpty: true,
+                    }
+                },
+                SendEmailStmp: {
+                    validators: {
+                        notEmpty: true,
+                    }
+                },
+                SendEmailProt: {
+                    validators: {
+                        notEmpty: true,
+                    }
+                },
+                SendFailMaxNum: {
+                    validators: {
+                        notEmpty: true,
+                    }
+                },
+                content: {
+                    validators: {
+                        notEmpty: true,
+                    }
+                },
+            }
+        }).on('success.form.fv', function (e) {
+            //阻止表单提交
+            e.preventDefault();
+            //得到表单对象
+            let $form = $(e.target);
+            let data = $form.serialize();
+
+            //得到序列化数据
+            $.ajax({
+                url: "{{ url_for('admin_web.email_info') }}",
+                method: 'POST',
+                data
+            }).then(function (res) {
+                BootstrapNotify.show(res.msg);
+                if (res.code === 200) {
+                    //成功
+                } else {
+                    //失败
+                }
+            });
+            $(document).ajaxError(
+                function (e, xhr, settings, error) {
+                    BootstrapNotify.show("服务器响应错误！");
+                });
+        });
+    </script>
+
+{% endblock %}
+
+
+

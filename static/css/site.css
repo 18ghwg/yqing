@@ -1,0 +1,301 @@
+html,
+body {
+    height: 100%;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap>.container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after,
+a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: "\e151";
+}
+
+a.desc:after {
+    content: "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view td {
+    white-space: nowrap;
+}
+
+.grid-view .filters input,
+.grid-view .filters select {
+    min-width: 50px;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li>form>button.logout {
+    padding: 15px;
+    border: none;
+}
+
+@media(max-width:767px) {
+    .nav li>form>button.logout {
+        display: block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+.nav>li>form>button.logout:focus,
+.nav>li>form>button.logout:hover {
+    text-decoration: none;
+}
+
+.nav>li>form>button.logout:focus {
+    outline: none;
+}
+
+/* 下面是我自定义的css*/
+.pd10 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.booklist {
+    width: 99%;
+    float: left;
+    clear: both;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.booklist dt {
+    float: left;
+    text-align: right;
+    width: 18%;
+    height: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+.booklist dd {
+    color: 000;
+    text-align: left;
+    float: right;
+    width: 81%;
+    padding: 0;
+}
+
+.booklist dd a {
+    color: #034ea2;
+}
+
+.booklist dd a:hover {
+    color: #034ea2;
+}
+
+
+.tag358 {
+    color: #ff5e0f;
+    border: 1px dotted #ff5e0f;
+    padding: 0 25px 0 10px;
+    height: 23px;
+    line-height: 23px;
+    display: inline-block;
+    margin: 0 5px 0 0;
+    position: relative;
+}
+
+.tag358 .removeclose {
+    display: inline-block;
+    width: 20px;
+    /*height: 20px;*/
+    /* background: url(../images/typeclose.png) no-repeat 50% 50%;*/
+    position: absolute;
+    vertical-align: middle;
+    right: 0px;
+    font-size: x-small;
+    color: #ff5e00;
+    /*top: 5px;*/
+}
+
+#choice {
+    height: 25px;
+}
+
+.tag358:hover {
+    text-decoration: none;
+}
+
+.input-new-tag {
+    width: 90px;
+}
+
+.input-new-tag input {
+    height: 100%;
+    border: none;
+    padding-left: 0px;
+}
+
+.tag .layui-btn .tag-close:hover {
+    border-radius: 2px;
+    background-color: #FF5722;
+    color: #fff;
+}
+
+.tag .layui-btn .tag-close {
+    margin-left: 8px;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+}
+
+/* 手机左侧菜单 */
+.sidenav358 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav358 a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav358 a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav358 .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+
+@media screen and (max-height: 450px) {
+    .sidenav358 {
+        padding-top: 15px;
+    }
+
+    .sidenav358 a {
+        font-size: 18px;
+    }
+}
+
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.row-eq-height>[class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.qikan-intro ul,
+.qikan-intro li {
+    list-style: none;
+    padding: 0px;
+}
+
+.none-listyle {
+    list-style: none;
+    padding: 0px;
+}
+
+.qikan-intro .col-xs-6 .none-listyle li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.qikan-intro .none-listyle li {
+    line-height: 250%;
+    border-bottom: 1px dashed #EFEFEF;
+}
+
+.qikan-intro .bookstack-info span {
+    color: #888888;
+}

@@ -1,0 +1,11 @@
+{% extends "user/header.html" %}
+{% block title %}异常请求{% endblock %}
+{% block ico %}异常请求{% endblock %}
+{% block body %}
+<div class="jumbotron">
+  <h1>操作失败!</h1>
+  <p>你请求的方法不存在</p>
+  <p>请清除浏览器缓存后重试！</p>
+  <p><a class="btn btn-primary btn-lg" href="../user/info" role="button">反馈</a></p>
+</div>
+{% endblock %}
