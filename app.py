@@ -44,7 +44,6 @@ def index():
         "date": web_data['putdate'],
         "WebName": web_data['WebName'],
     }
-    print(check_user('2003460310', 'sun0218'))
     return render_template("index.html", **info)
 
 
