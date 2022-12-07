@@ -57,7 +57,7 @@ def admin_login():
 def admin_logout():
     # 清除cookie
     session.clear()
-    return redirect(url_for("admin.admin_login"))
+    return redirect(url_for("admin_index.admin_login"))
 
 
 # ajax获取网站信息api
