@@ -2,7 +2,7 @@
 
 **南科疫情自动打卡web项目-观后无感**
 
-#说明
+# 说明
 
 本程序为南京科技职业学院疫情自动打卡web
 
@@ -83,6 +83,10 @@ https://ajiho.gitee.io/bootstrap-admin/plugin-chart.html
 https://www.bootcss.com/
 https://www.jq22.com/
 `
+
+# 作者的话
+
+**代码比较烂，大佬误笑**
 
 
 
