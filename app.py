@@ -14,7 +14,6 @@ from module.mysql import Config
 from module.mysql.UserClass import user_class
 from module.mysql.WebClass import web_class
 from module.mysql.modus import get_sql_info
-from module.school.daka import check_user
 from module.send import sendwxbot
 from tasks import Config as TaskConfig
 

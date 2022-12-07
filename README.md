@@ -20,9 +20,9 @@
 
 等待模块安装完成即可，必须得安装指定版本的模块，不要安装最新版本的模块
 
-2、在控制台执行命令`flask db init`进行数据库初始化，再执行`flask db migrate`构建数据库迁移文件，最后执行`flask db upgrade`上传已经创建的数据库表
-3、导入根目录的`yqing.sql`在你的数据库中
-4、在控制台输入命令`python app.py`运行疫情打卡web项目
+2、在控制台执行命令`flask db init`进行数据库初始化，再执行`flask db migrate`构建数据库迁移文件，最后执行`flask db upgrade`上传已经创建的数据库表<br>
+3、导入根目录的`yqing.sql`在你的数据库中<br>
+4、在控制台输入命令`python app.py`运行疫情打卡web项目<br>
 
 到这里本程序就已经安装并运行成功了
 
