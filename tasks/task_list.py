@@ -12,14 +12,14 @@ class Config(object):
             'hour': '13',  # 下午1点
             'minute': '30'  # 30分
         },
-        # {  # 任务2
-        #     'id': '疫情打卡now',
-        #     'func': 'tasks:run',
-        #     'trigger': 'cron',  # 定时方法
-        #     'day': '*',  # 每天
-        #     'hour': '*',  # 每分钟执行一次
-        #     'minute': '*'
-        # },
+        {  # 任务2
+            'id': '疫情打卡now',
+            'func': 'tasks:run',
+            'trigger': 'cron',  # 定时方法
+            'day': '*',  # 每天
+            'hour': '*',  # 每分钟执行一次
+            'minute': '*'
+        },
         {  # 任务3
             'id': '邮件公告',
             'func': 'tasks:send',
@@ -40,14 +40,14 @@ class Config(object):
             'hour': '*',  # 每分钟执行一次
             'minute': '*'
         },
-        # {  # 任务6
-        #     'id': '未打卡账号检测now',
-        #     'func': 'tasks:check_ndk_user',
-        #     'trigger': 'cron',  # 定时方法
-        #     'day': '*',  # 每天
-        #     'hour': '*',  # 每分钟执行一次
-        #     'minute': '*'
-        # },
+        {  # 任务6
+            'id': '未打卡账号检测now',
+            'func': 'tasks:check_ndk_user',
+            'trigger': 'cron',  # 定时方法
+            'day': '*',  # 每天
+            'hour': '*',  # 每分钟执行一次
+            'minute': '*'
+        },
         {  # 任务7
             'id': '未打卡账号检测all',
             'func': 'tasks:check_ndk_users',
