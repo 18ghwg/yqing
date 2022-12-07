@@ -10,7 +10,7 @@ HOSTNAME = '124.222.113.243'
 PORT = '3306'
 DATABASE = 'yqing_flask'
 USERNAME = 'yqing_flask'
-PASSWORD = 'CzG767MMKGBddM7n'
+PASSWORD = 'wdGzDTamk6x7ETe6'
 DB_URI = 'mysql+pymysql://{}:{}@{}:{}/{}?charset=utf8'.format(USERNAME, PASSWORD, HOSTNAME, PORT, DATABASE)
 SQLALCHEMY_DATABASE_URI = DB_URI
 

@@ -47,12 +47,6 @@
                             <div id="emailHelp" class="form-text">加群链接</div>
                         </div>
 
-                        <div class="mb-3">
-                            <label for="KamiPayUrl" class="form-label">卡密购买地址</label>
-                            <input type="text" class="form-control" id="KamiPayUrl" name="KamiPayUrl" value="{{ KamiPayUrl }}">
-                            <div class="form-text">卡密购买的链接地址</div>
-                        </div>
-
                         <button type="submit" class="btn btn-primary">保存</button>
                     </form>
                 </div>
@@ -84,11 +78,6 @@
                     }
                 },
                 qq_group_url: {
-                    validators: {
-                        notEmpty: true,
-                    }
-                },
-                KamiPayUrl: {
                     validators: {
                         notEmpty: true,
                     }

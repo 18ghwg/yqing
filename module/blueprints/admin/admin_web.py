@@ -33,7 +33,6 @@ def web_info():
             dkurl = kv['weburl_student']  # 学校打卡网站链接
             web_gg = kv['gg']  # 网站公告
             qq_group_url = kv['qq_group_url']  # QQ群url
-            KamiPatUrl = kv['KamiPayUrl']  # 卡密购买链接
         except KeyError:
             return {"code": 500, "msg": "参数有误"}
         else:
@@ -44,7 +43,6 @@ def web_info():
                 "DKURL": dkurl,
                 "gg": web_gg,
                 "QQGroupUrl": qq_group_url,
-                "KamiPayUrl": KamiPatUrl,
             }
             gg_data = Config.query.get(1)
             if gg_data.gg != web_gg:  # 如果修改了公告内容
