@@ -1,12 +1,12 @@
 # 南科疫情自动打卡-观后无感
 
-**南科疫情自动打卡-观后无感**
+**南科疫情自动打卡web项目-观后无感**
 
-**说明**
+#说明
 
 本程序为南京科技职业学院疫情自动打卡web
 
-项目框架：Flask
+**项目框架：Flask**
 
 创建你的数据库，库名为`yqing`<br>
 第一次使用程序请导入根目录的`yqing.sql`在你的数据库中
@@ -39,12 +39,53 @@ python版本最好是3.9以上(如果没有请在管理器内下载python指定�
 跟我一样填写即可，如果项目启动有问题，请修改`运行项目的用户`为`root`<br>
 第一个勾一定要打上，第二个看你需求
 
-**<<--管理员后台-->>**
+#**<<--管理员后台-->>**
 
 域名地址/admin<br>
 账号：123456<br>
 密码：abcd<br>
 改密码在数据库中直接改
+
+# Falsk 框架的一些文档
+
+**Falsk框架项目实战教程视频**
+
+`【2023版-零基础玩转Python Flask框架-学完可就业】 https://www.bilibili.com/video/BV17r4y1y7jJ/?share_source=copy_web&vd_source=698b755e8ad6eb86b5516149dd3baaa6`
+
+_定时任务_
+
+`https://xugaoxiang.com/2020/10/08/flask-20-apscheduler/`
+`https://blog.51cto.com/u_14246112/5158145`
+`https://blog.csdn.net/RoninYang/article/details/121131548`
+
+_数据库_
+
+`
+https://blog.csdn.net/lizhenqi123456/article/details/125442996
+https://xugaoxiang.com/2020/10/08/flask-20-apscheduler/
+https://www.cnblogs.com/yj0405/p/14824592.html#_label1
+https://www.nuomiphp.com/eplan/192100.html
+https://blog.csdn.net/Oopsl/article/details/105754689
+`
+
+_redis_
+
+`
+https://www.likeinlove.com/info/128.html
+https://blog.csdn.net/craftsman2020/article/details/116115937
+`
+
+_模板_
+
+`
+https://blog.csdn.net/SincereQ/article/details/102823170
+https://ajiho.gitee.io/bootstrap-admin/plugin-chart.html
+https://www.bootcss.com/
+https://www.jq22.com/
+`
+
+
+
 
 
 
