@@ -42,7 +42,6 @@ class UsersList(db.Model):
     check_time = db.Column(db.DateTime, nullable=False, default="2002-02-18 00:00:00", comment="签到时间")
     credit = db.Column(db.Integer, nullable=False, comment="积分")
     send_fail_num = db.Column(db.Integer, nullable=False, default=0, comment="用户拒收邮件次数")
-    QjmQuota = db.Column(db.Integer, nullable=False, default=0, comment="额外请假名额")
     # 外键绑定
     # relationship('绑定的类型名', backref='articles':允许反向引用)
     email = db.relationship('Emails', backref='userslist')
