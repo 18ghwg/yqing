@@ -18,7 +18,6 @@
                             <tr>
                                 <th>编号</th>
                                 <th>学号</th>
-                                <th>密码</th>
                                 <th hidden="hidden">emailid</th>
                                 <th>名字</th>
                                 <th>班级</th>
@@ -30,7 +29,6 @@
                                 <th>状态</th>
                                 <th>打卡次数</th>
                                 <th>积分数</th>
-                                <th>请假额度</th>
                                 <th>签到状态</th>
                                 <th>签到时间</th>
                                 <th>最后打卡时间</th>
@@ -45,7 +43,6 @@
                                 <tr>
                                     <td id="user_num{{ user.user_num }}">{{ user.user_num }}</td>
                                     <td id="xuehao{{ user.user_num }}">{{ user.xuehao }}</td>
-                                    <td id="password{{ user.user_num }}">{{ user.password }}</td>
                                     <td id="emailid{{ user.user_num }}" hidden="hidden">{{ user.email_id }}</td>
                                     <td id="name{{ user.user_num }}">{{ user.name }}</td>
                                     <td id="clas{{ user.user_num }}">{{ user.clas }}</td>
@@ -57,7 +54,6 @@
                                     <td id="state{{ user.user_num }}">{{ user.state }}</td>
                                     <td id="dk_num{{ user.user_num }}">{{ user.dk_num }}</td>
                                     <td id="credit{{ user.user_num }}">{{ user.credit }}</td>
-                                    <td id="QjmQuota{{ user.user_num }}">{{ user.QjmQuota }}</td>
                                     <td id="check_state{{ user.user_num }}">{{ user.check_state }}</td>
                                     <td id="check_time{{ user.user_num }}">{{ user.check_time }}</td>
                                     <td id="last_dk_time{{ user.user_num }}">{{ user.last_dk_time }}</td>
@@ -234,16 +230,6 @@
             </div>
 
             <div class="col-12">
-                <label for="QjmQuota" class="form-label">请假额度</label>
-                <div class="input-group">
-                    <span class="input-group-text bg-transparent">
-                        <i class="bi bi-credit-card"></i>
-                    </span>
-                    <input type="text" class="form-control border-start-0" id="QjmQuota" name="QjmQuota" placeholder="请输入用户请假额度" autocomplete="off" value="`+QjmQuota+`">
-                </div>
-            </div>
-
-            <div class="col-12">
                 <label for="check_state" class="form-label">签到状态</label>
                 <div class="input-group">
                     <span class="input-group-text bg-transparent">
@@ -276,7 +262,6 @@
                             const dk_time = form.querySelector('#dk_time').value;
                             const state = form.querySelector('#state').value;
                             const credit = form.querySelector('#credit').value;
-                            const QjmQuota = form.querySelector('#QjmQuota').value;
                             const check_state = form.querySelector('#check_state').value;
 
 
@@ -293,7 +278,6 @@
                                     "dk_time": dk_time,
                                     "state": state,
                                     "credit": credit,
-                                    "QjmQuota": QjmQuota,
                                     "check_state": check_state,
                                 }
                             }).then(function (res) {

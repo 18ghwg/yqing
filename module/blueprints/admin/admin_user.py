@@ -83,7 +83,6 @@ def user_put_info():
         email = _data["email"]
         room_num = _data["room_num"]
         credit = int(_data["credit"])
-        QjmQuota = int(_data["QjmQuota"])
         qqh = _data["qqh"]
         state = int(_data["state"])
         dk_time = _data["dk_time"]
@@ -101,7 +100,6 @@ def user_put_info():
             "check_state": check_state,
             "dk_time": dk_time,
             "credit": credit,
-            "QjmQuota": QjmQuota,
                 }
 
         return user_class.put_user_info(info)

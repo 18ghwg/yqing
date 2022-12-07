@@ -8,9 +8,9 @@ logger = Logger().logger
 # 数据库的配置变量
 HOSTNAME = '124.222.113.243'
 PORT = '3306'
-DATABASE = 'yqing'
-USERNAME = 'yqing'
-PASSWORD = 'iXWn2xzrC3mWwbDt'
+DATABASE = 'yqing_flask'
+USERNAME = 'yqing_flask'
+PASSWORD = 'CzG767MMKGBddM7n'
 DB_URI = 'mysql+pymysql://{}:{}@{}:{}/{}?charset=utf8'.format(USERNAME, PASSWORD, HOSTNAME, PORT, DATABASE)
 SQLALCHEMY_DATABASE_URI = DB_URI
 
