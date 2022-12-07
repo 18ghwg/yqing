@@ -1,13 +1,13 @@
 /*
 MySQL Backup
-Database: yqing_flask
+Database: yqing
 Backup Time: 2022-12-06 15:38:12
 */
 
 SET FOREIGN_KEY_CHECKS=0;
-DROP TABLE IF EXISTS `yqing_flask`.`admins`;
-DROP TABLE IF EXISTS `yqing_flask`.`config`;
-DROP TABLE IF EXISTS `yqing_flask`.`credit_config`;
+DROP TABLE IF EXISTS `yqing`.`admins`;
+DROP TABLE IF EXISTS `yqing`.`config`;
+DROP TABLE IF EXISTS `yqing`.`credit_config`;
 CREATE TABLE `admins` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `xuehao` varchar(50) NOT NULL COMMENT '学号',
@@ -55,20 +55,20 @@ CREATE TABLE `credit_config` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 BEGIN;
-LOCK TABLES `yqing_flask`.`admins` WRITE;
-DELETE FROM `yqing_flask`.`admins`;
-INSERT INTO `yqing_flask`.`admins` (`id`,`xuehao`,`password`) VALUES (1, '123456', 'abcd');
+LOCK TABLES `yqing`.`admins` WRITE;
+DELETE FROM `yqing`.`admins`;
+INSERT INTO `yqing`.`admins` (`id`,`xuehao`,`password`) VALUES (1, '123456', 'abcd');
 UNLOCK TABLES;
 COMMIT;
 BEGIN;
-LOCK TABLES `yqing_flask`.`config` WRITE;
-DELETE FROM `yqing_flask`.`config`;
-INSERT INTO `yqing_flask`.`config` (`id`,`WebName`,`WebUrl`,`DKURL`,`Managers`,`Groups`,`CorpID`,`AccessToken`,`AgentID`,`CorpSecret`,`AdminEmail`,`SendEmailUser`,`SendEmailPassword`,`SendEmailStmp`,`SendEmailPort`,`SendEmailUserName`,`SendFailMaxNum`,`SendEmailMaxNum`,`EmailGG`,`gg`,`putdate`,`QQGroupUrl`,`KamiPayUrl`) VALUES (1, '南京科技疫情自动打卡', 'http://127.0.0.1', 'https://xgyyx.njpi.edu.cn', '123,1234,1234', '1243435', 'ww118d8a7258126c4', 'UAntBfqmilkiSkk7hgMouG6PP9VtP7_Ma6kBnUm_cQj0d2AwZZ8ySqJ9VzdlrYWbG5jdUHG9soMjNCwqpISQYvEjBH8XLaldLQmvTnS9ZAThRqGwiuKzABNs_UrDJFCbAZ9-8Xgxpum_F0Bg0uhynZkUEtfntxncBh1RinyjYtcQ34wO4mqy35tM5sLA5heGFshZE0YA2e4W7E742jQ', '100007', 'Uazi8C0abPK5tOtzvrMUQU848NHGgD6pRrB3gPK0', 'ghwg18@qq.com', 'le0218lele@163.com', 'YBVLHURRZES', 'smtp.163.com', 465, 'mail', 5, 8, '<p>学校已经把我的服务器ip封了，大家明天自己打卡吧，如果到最后搞不了，本服务将关闭</p>\r\n<p>感谢大家一路的支持</p>', '学校可能封了我服务器ip，暂时不能添加和登录账号', '2022-12-05 15:35:07', 'https://qm.qq.com/cgi-bin/qm/qr?k=-GTDsF20Loc4AA97vT9nFR4nExSi_EFN&jump_from=webapi&authKey=8VWwu9BaC7+X7uPEBTPOPnFJnVwycwLDFCCamgFcpL77eSHqh1YA6y8+U64JjUlq', 'https://dwz.cn/4sfaYq9B');
+LOCK TABLES `yqing`.`config` WRITE;
+DELETE FROM `yqing`.`config`;
+INSERT INTO `yqing`.`config` (`id`,`WebName`,`WebUrl`,`DKURL`,`Managers`,`Groups`,`CorpID`,`AccessToken`,`AgentID`,`CorpSecret`,`AdminEmail`,`SendEmailUser`,`SendEmailPassword`,`SendEmailStmp`,`SendEmailPort`,`SendEmailUserName`,`SendFailMaxNum`,`SendEmailMaxNum`,`EmailGG`,`gg`,`putdate`,`QQGroupUrl`,`KamiPayUrl`) VALUES (1, '南京科技疫情自动打卡', 'http://127.0.0.1', 'https://xgyyx.njpi.edu.cn', '123,1234,1234', '1243435', 'ww118d8a7258126c4', 'UAntBfqmilkiSkk7hgMouG6PP9VtP7_Ma6kBnUm_cQj0d2AwZZ8ySqJ9VzdlrYWbG5jdUHG9soMjNCwqpISQYvEjBH8XLaldLQmvTnS9ZAThRqGwiuKzABNs_UrDJFCbAZ9-8Xgxpum_F0Bg0uhynZkUEtfntxncBh1RinyjYtcQ34wO4mqy35tM5sLA5heGFshZE0YA2e4W7E742jQ', '100007', 'Uazi8C0abPK5tOtzvrMUQU848NHGgD6pRrB3gPK0', '123@qq.com', '123@163.com', 'abc', 'smtp.163.com', 465, 'mail', 5, 8, 'abc', '2022-12-05 15:35:07', 'https://baidu.com', 'https://baidu.com');
 UNLOCK TABLES;
 COMMIT;
 BEGIN;
-LOCK TABLES `yqing_flask`.`credit_config` WRITE;
-DELETE FROM `yqing_flask`.`credit_config`;
-INSERT INTO `yqing_flask`.`credit_config` (`id`,`CheckCredit`,`QJMCredit`,`JoinCredit`,`ActivityStartTime`,`ActivityEndTime`,`ActivityUserGetNum`,`ActivityAdminGetNum`) VALUES (1, 1, 1, 3, '2022-11-08 16:05:00', '2022-11-08 17:10:00', 2, 4);
+LOCK TABLES `yqing`.`credit_config` WRITE;
+DELETE FROM `yqing`.`credit_config`;
+INSERT INTO `yqing`.`credit_config` (`id`,`CheckCredit`,`QJMCredit`,`JoinCredit`,`ActivityStartTime`,`ActivityEndTime`,`ActivityUserGetNum`,`ActivityAdminGetNum`) VALUES (1, 1, 1, 3, '2022-11-08 16:05:00', '2022-11-08 17:10:00', 2, 4);
 UNLOCK TABLES;
 COMMIT;
