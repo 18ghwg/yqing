@@ -22,7 +22,7 @@ admin_user_bp = Blueprint("admin_user", __name__, url_prefix="/admin")
 def user_list():
     # 获取参数
     try:
-        pag = int(request.args.get("pag"))
+        pag = int(request.args.get("pag", default=1))
     except TypeError:
         # 搜索的学号
         xuehao = request.args.get("xuehao")
@@ -111,7 +111,7 @@ def user_put_info():
 @admin_login_check
 def black_list():
     # 获取参数
-    pag = int(request.args.get("pag"))
+    pag = int(request.args.get("pag", default=1))
     _list = user_class.get_black_list()  # 黑名单列表
     black_num = len(_list)  # 黑名单数量
     pag_num = admin_class.mod_pag(black_num)  # 处理pag页数
