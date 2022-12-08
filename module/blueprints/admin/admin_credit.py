@@ -52,7 +52,7 @@ def credit_info():
 def credit_log_list():
     # 获取get参数
     try:
-        pag = int(request.args.get("pag"))  # 页码
+        pag = request.args.get("pag", default=1, type=int)  # 页码
     except TypeError:
         xuehao = request.args.get("xuehao")  # 学号
         _list = credit_class.admin_search_credit_info(xuehao)  # log列表
