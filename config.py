@@ -6,17 +6,17 @@ from log import Logger
 logger = Logger().logger
 
 # 数据库的配置变量
-HOSTNAME = '124.222.113.243'
+HOSTNAME = '数据库地址'
 PORT = '3306'
-DATABASE = 'yqing_flask'
-USERNAME = 'yqing_flask'
-PASSWORD = 'wdGzDTamk6x7ETe6'
+DATABASE = '数据表名'
+USERNAME = '用户名'
+PASSWORD = '密码'
 DB_URI = 'mysql+pymysql://{}:{}@{}:{}/{}?charset=utf8'.format(USERNAME, PASSWORD, HOSTNAME, PORT, DATABASE)
 SQLALCHEMY_DATABASE_URI = DB_URI
 
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 # session密钥
-SECRET_KEY = "KJKLEREKRkeljrljeklsjrkflsFKL"
+SECRET_KEY = "KJKLEREKRkeljrljeklsjrkflsFKL"  # session密钥
 PERMANENT_SESSION_LIFETIME = timedelta(days=7)  # 设置cookie为7天过期
 
 # daka
@@ -36,27 +36,8 @@ headers = {
 
 # 积分操作类别
 credit_method = {
-    "qjm_add": "新增请假码",
-    "qjm_put": "更新请假码",
     "activit": "积分活动",
     "admin_add": "管理员充值",
     "admin_reduce": "管理员扣除",
     "user_check": "用户签到",
-    "credit_move": "积分转移",
-    "use_kami": "使用卡密"
-}
-
-# 请加额度操作类别
-quota_method = {
-    "use_kami": "使用卡密",
-    "admin_add": "管理员充值",
-    "admin_reduce": "管理员扣除",
-    "qjm_add": "新增请假码",
-    "quota_move": "额度转移",
-}
-
-# 卡密类型配置
-kami_lib_config = {
-    "Credit": "积分",
-    "QjmQuota": "请假额度"
 }
