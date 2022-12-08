@@ -6,11 +6,11 @@ from log import Logger
 logger = Logger().logger
 
 # 数据库的配置变量
-HOSTNAME = '数据库地址'
+HOSTNAME = '127.0.0.1'
 PORT = '3306'
-DATABASE = '数据表名'
-USERNAME = '用户名'
-PASSWORD = '密码'
+DATABASE = 'yqing'  # 数据表
+USERNAME = 'root'  # 用户
+PASSWORD = 'root'  # 密码
 DB_URI = 'mysql+pymysql://{}:{}@{}:{}/{}?charset=utf8'.format(USERNAME, PASSWORD, HOSTNAME, PORT, DATABASE)
 SQLALCHEMY_DATABASE_URI = DB_URI
 
