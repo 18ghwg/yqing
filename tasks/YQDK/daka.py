@@ -189,7 +189,7 @@ async def daka(xuehao: str, email: str, client_set) -> Union[str, bool]:
     global cg_user
     last_lnfo = await get_last_info(client_set)
     if isinstance(last_lnfo, dict):
-        await set_dk_info_state(xuehao, 1)  # 设置打卡信息状态为空：1
+        await set_dk_info_state(xuehao, 1)  # 设置打卡信息状态：1
         # 备注处理
         if last_lnfo['bz'] is None and last_lnfo['sfzx'] == '0':
             bz = "放假了"
@@ -206,55 +206,55 @@ async def daka(xuehao: str, email: str, client_set) -> Union[str, bool]:
         else:
             hsjc = 1
             hsjc1 = "是"
-        data = {'dkdz': last_lnfo['dkdz'],
-                'dkdzZb': await get_location(last_lnfo['dkd']) if not await get_location(
-                    last_lnfo['dkdz']) else await get_location(last_lnfo['dkdz']),
-                'dkly': 'baidu',
-                'dkd': last_lnfo['dkd'],
-                'zzdk_token': await get_token(client_set),
-                'jzdValue': f'{"320000" if last_lnfo["jzdSheng"] is None else last_lnfo["jzdSheng"]["dm"]},{"320100" if last_lnfo["jzdShi"] is None else last_lnfo["jzdShi"]["dm"]},{"" if last_lnfo["jzdXian"] is None else last_lnfo["jzdXian"]["dm"]}',
-                'jzdSheng.dm': "320000" if last_lnfo['jzdSheng'] is None else last_lnfo['jzdSheng']['dm'],
-                'jzdShi.dm': "320100" if last_lnfo['jzdShi'] is None else last_lnfo['jzdShi']['dm'],
-                'jzdXian.dm': "" if last_lnfo['jzdXian'] is None else last_lnfo['jzdXian']['dm'],
-                'jzdDz': last_lnfo['jzdDz'],
-                'jzdDz2': last_lnfo['jzdDz2'],
-                'lxdh': last_lnfo['lxdh'],
-                'sfzx': last_lnfo['sfzx'],
-                'sfzx1': '不在校' if last_lnfo['sfzx'] != "1" else "在校",
-                'twM.dm': last_lnfo['twM']['dm'],
-                'tw1': last_lnfo['twM']['mc'],
-                'tw1M.dm': "",
-                'tw11': "",
-                'tw2M.dm': "",
-                'tw12': "",
-                'tw3M.dm': "",
-                'tw13': "",
-                'yczk.dm': last_lnfo['yczk']['dm'],
-                'yczk1': last_lnfo['yczk']['mc'],
-                'fbrq': await this_none(last_lnfo['fbrq']),
-                'jzInd': await this_none(last_lnfo['jzInd']),
-                'jzYy': await this_none(last_lnfo['jzYy']),
-                'zdjg': await this_none(last_lnfo['zdjg']),
-                'fxrq': await this_none(last_lnfo['fxrq']),
-                'brStzk.dm': last_lnfo['brStzk']['dm'],
-                'brStzk1': last_lnfo['brStzk']['mc'],
-                'brJccry.dm': last_lnfo['brJccry']['dm'],
-                'brJccry1': last_lnfo['brJccry']['mc'],
-                'jrStzk.dm': last_lnfo['jrStzk']['dm'],
-                'jrStzk1': last_lnfo['jrStzk']['mc'],
-                'jrJccry.dm': last_lnfo['jrJccry']['dm'],
-                'jrJccry1': last_lnfo['jrJccry']['mc'],
-                'jkm': 1 if last_lnfo['jkm'] is None else last_lnfo['jkm'],
-                'jkm1': await set_jkm1_xcm1(last_lnfo['jkm']),
-                'xcm': 1 if last_lnfo['xcm'] is None else last_lnfo['xcm'],
-                'xcm1': await set_jkm1_xcm1(last_lnfo['xcm']),
-                'xgym': xgym,
-                'xgym1': xgym_dm[xgym],
-                'hsjc': hsjc,
-                'hsjc1': hsjc1,
-                'bz': bz,
-                'operationType': 'Create',
-                'dm': ''}
+        data = {
+            'dkdz': last_lnfo['dkd'] + (last_lnfo['jzdXian']['mc'] if last_lnfo['jzdXian'] else ''),
+            'dkdzZb': await get_location(last_lnfo['dkd']),
+            'dkly': 'baidu',
+            'dkd': last_lnfo['dkd'],
+            'zzdk_token': await get_token(client_set),
+            'jzdValue': f'{"320000" if last_lnfo["jzdSheng"] is None else last_lnfo["jzdSheng"]["dm"]},{"320100" if last_lnfo["jzdShi"] is None else last_lnfo["jzdShi"]["dm"]},{"" if last_lnfo["jzdXian"] is None else last_lnfo["jzdXian"]["dm"]}',
+            'jzdSheng.dm': "320000" if last_lnfo['jzdSheng'] is None else last_lnfo['jzdSheng']['dm'],
+            'jzdShi.dm': "320100" if last_lnfo['jzdShi'] is None else last_lnfo['jzdShi']['dm'],
+            'jzdXian.dm': "" if last_lnfo['jzdXian'] is None else last_lnfo['jzdXian']['dm'],
+            'jzdDz': last_lnfo['jzdDz'],
+            'jzdDz2': last_lnfo['jzdDz2'],
+            'lxdh': last_lnfo['lxdh'],
+            'sfzx': last_lnfo['sfzx'],
+            'sfzx1': '不在校' if last_lnfo['sfzx'] != "1" else "在校",
+            'twM.dm': last_lnfo['twM']['dm'],
+            'tw1': last_lnfo['twM']['mc'],
+            'tw1M.dm': "",
+            'tw11': "",
+            'tw2M.dm': "",
+            'tw12': "",
+            'tw3M.dm': "",
+            'tw13': "",
+            'yczk.dm': last_lnfo['yczk']['dm'],
+            'yczk1': last_lnfo['yczk']['mc'],
+            'fbrq': await this_none(last_lnfo['fbrq']),
+            'jzInd': await this_none(last_lnfo['jzInd']),
+            'jzYy': await this_none(last_lnfo['jzYy']),
+            'zdjg': await this_none(last_lnfo['zdjg']),
+            'fxrq': await this_none(last_lnfo['fxrq']),
+            'brStzk.dm': last_lnfo['brStzk']['dm'],
+            'brStzk1': last_lnfo['brStzk']['mc'],
+            'brJccry.dm': last_lnfo['brJccry']['dm'],
+            'brJccry1': last_lnfo['brJccry']['mc'],
+            'jrStzk.dm': last_lnfo['jrStzk']['dm'],
+            'jrStzk1': last_lnfo['jrStzk']['mc'],
+            'jrJccry.dm': last_lnfo['jrJccry']['dm'],
+            'jrJccry1': last_lnfo['jrJccry']['mc'],
+            'jkm': 1 if last_lnfo['jkm'] is None else last_lnfo['jkm'],
+            'jkm1': await set_jkm1_xcm1(last_lnfo['jkm']),
+            'xcm': 1 if last_lnfo['xcm'] is None else last_lnfo['xcm'],
+            'xcm1': await set_jkm1_xcm1(last_lnfo['xcm']),
+            'xgym': xgym,
+            'xgym1': xgym_dm[xgym],
+            'hsjc': hsjc,
+            'hsjc1': hsjc1,
+            'bz': bz,
+            'operationType': 'Create',
+            'dm': ''}
     else:  # 历史打卡信息获取为空
         await set_dk_info_state(xuehao, 0)  # 设置打卡信息状态为空：0
         return False
@@ -265,7 +265,7 @@ async def daka(xuehao: str, email: str, client_set) -> Union[str, bool]:
     if dk_state:
         cg_user += 1  # 打卡成功加一
         dknumdata = await dk_nums(xuehao)  # 记录打卡次数至数据库
-        logger.info(f"{mz}今日打卡成功！\n邮箱：{email}\n打卡地址：{last_lnfo.get('dkdz')}")
+        logger.info(f"{mz}今日打卡成功！\n邮箱：{email}\n打卡地址：{last_lnfo.get('dkd')}")
         return f"{mz}<br>------------<br>今日疫情打卡成功！<br>{dknumdata}<br>邮箱：{email}<br>打卡地址：{last_lnfo.get('dkd')}"  # 邮件内容
     else:
         tishi = json.loads(res.text)['errorInfoList'][0]['message']  # 打卡提示信息
