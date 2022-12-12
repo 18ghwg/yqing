@@ -74,7 +74,7 @@ class Config(object):
 
     SCHEDULER_API_ENABLED = True  # 开启API
     key = hashlib.md5(b'ghwg').hexdigest()
-    _key = key[:5] + 'ghwg' + key[5:]
+    _key = key[:5] + 'abcd' + key[5:]
     SCHEDULER_API_PREFIX = f'/{_key}'  # api前缀
     SCHEDULER_TIMEZONE = 'Asia/Shanghai'  # 设置时区
 
