@@ -19,6 +19,10 @@ from module.mysql.WebClass import web_class
 from module.school.session import session
 
 
+# 账号密码检查
+from module.school.yzm import yzm
+
+
 def check_user(xuehao: str, password: str):
     """
     :param xuehao: 学号
@@ -32,6 +36,7 @@ def check_user(xuehao: str, password: str):
         'pd_mm': jiami(password)
     }
     try:
+        yzm(session)  # 过滑块验证
         response = session.post(url=url, data=data, timeout=3)
         sc = response.json()
         if "msg" in str(sc):  # 登录出错

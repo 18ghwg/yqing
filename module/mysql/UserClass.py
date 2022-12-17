@@ -258,7 +258,6 @@ class UserClass:
             check_time = _data.check_time  # 签到时间
             check_state = check_state(check_time)  # 签到状态
             DKTimeUserNum = cls.get_dk_time_user_num(_data.dk_time)  # 同时间打卡人数
-            QjmQuota = _data.QjmQuota  # 额外请假数
             if user_state == 2 or user_state == 4:  # 状态无效
                 email_state = 1  # 未验证
             else:
@@ -283,7 +282,6 @@ class UserClass:
                 "check_state": check_state,
                 "check_time": check_time,
                 "DKTimeUserNum": DKTimeUserNum,
-                "QjmQuota": QjmQuota,
             }
             return info
         else:  # 用户不在用户表中

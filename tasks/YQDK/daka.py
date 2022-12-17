@@ -5,12 +5,15 @@ import json
 import re
 import time
 from typing import Union
+
+import cv2
 import httpx
 from exts import app
 from config import fengexian, logger, headers
 from module.mysql import UsersList, Emails
 from module.mysql.WebClass import web_class
-from .module import modstate, deluser, dk_nums, up_ndkuser, get_ndkusers, del_ndkuser, set_dk_info_state, get_user_info
+from .module import modstate, deluser, dk_nums, up_ndkuser, get_ndkusers, del_ndkuser, set_dk_info_state, get_user_info, \
+    yzm
 from module import send_email, sendwxbot
 
 usernum = 0  # 账号数量
@@ -50,7 +53,8 @@ async def login(xuehao: str, mima: str, email: str, client_set) -> bool:
         'pd_mm': jiami(mima)
     }
     try:
-        await client_set.get(url=web_class.get_web_config()["DKURL"])
+        await yzm(client_set)  # 过验证码
+        await client_set.get(url=web_class.get_web_config()["DKURL"])  # 访问网站首页
         res = await client_set.post(web_class.get_web_config()["DKURL"] + '/student/website/login', data=data)
         login_data = json.loads(res.text)
     except (httpx.ReadTimeout, httpx.ConnectTimeout, httpx.ConnectError):
